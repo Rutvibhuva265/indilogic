@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+body{
+    font-family: "Titillium Web", sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.container{
+    max-width: 1780px;
+    padding:0 50px;
+}
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+}
+a{
+    display: inline-block;
+}
+p{
+    margin-bottom: 0;
+}
+/* header */
+
+header{
+    background-color: #EEF7FA;
+    padding: 28px 0;
+}
+
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    color: #75828C;
+    font-size: 20px;
+    font-weight: 600;
+}
+header nav.main-menu button{
+    
+}
+header nav.main-menu ul li:last-child svg{
+    margin-left: 5px;
+}
+header nav.main-menu ul li:last-child {
+    background: #80C6DE;
+    color: #fff;
+    border-radius: 30px;
+    padding: 14px 18px;
+    font-family: 'Titillium Web';
+    font-size: 16px;
+    line-height: 14px;
+}
+
+
+/* footer */
+.f-menu ul li{
+    list-style: none;
+}
+.f-menu ul li a{
+    font-size: 14px;
+    line-height: 22px;
+    color: #242424;
+}
+.f-title{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 22px;
+}
+.f-address p {
+    font-size: 14px;
+    line-height: 22px;
+    color: #242424;
+    padding-bottom: 20px;
+}
+.bottom-footer{
+    background-color: #161B1B;
+    padding: 12px 0;
+}
+footer .footer-sec{
+    padding: 46px 0 25px 0;
+}
+.bottom-footer p{
+    font-size: 17px;
+    line-height: 22px;
+}
+
+/* banner-sec */
+.banner-sec{
+    padding-top:32px;
+    padding-bottom: 72px;
+    position: relative;
+}
+.banner-sec .banner-title h1 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 54px;
+    max-width: 200px;
+}
+.banner-sec .banner-content{
+    max-width: 350px;
+}
+.banner-sec a{
+    background: #80C6DE;
+    color: #2B2B2B;
+    padding: 23px 60px;
+    border-radius: 90px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* second-sec */
+
+.second-sec:before {
+    /* background-color: rgba(238, 247, 250, 1); */
+    background-image: url('../image/sec-2.png');
+    content: '';
+    display: block;
+    width: 600px;
+    height: 600px;
+    position: relative;
+    z-index: 9999;
+}
+.second-sec .icon-box .row{
+    border-radius: 22px;
+    background-color: #fff;
+}
+.second-sec .icon-box .icon-content {
+    border-radius: 22px;
+    padding: 20px;
+    transition: background 0.5s ease, transform 0.5s ease; /* Add transition here */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.second-sec .icon-box .icon-content:hover{
+    background: rgba(191, 239, 255, 1);
+    transform: scale(1.01); 
+}
+.second-sec .icon-box .icon-content p{
+    color: rgba(96, 96, 96, 1);
+    font-weight: 400;
+    max-width: 210px;
+    margin: 0 auto;
+}
+.second-sec .icon-box .icon-content:hover svg path{
+    fill: #266699 !important;
+}
+.second-sec .icon-box .icon-content:hover p{
+    color: #266699;
+}
+
+
+
+/* third-sec */
+
+.common-title h4 {
+    font-size: 26px;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+.common-title h3 {
+    color: #2C2C2C;
+    font-weight: 600;
+    max-width: 500px;
+}
+.third-sec .about-content a{
+    background: #FFFDF7;
+    border: 1.5px solid #000000;
+    padding: 10px 50px;
+    border-radius: 10px;
+    color: #2C2C2C;
+    font-weight: 600;
+}
+.third-sec .about-content p{
+    color: #4D4E53;
+    margin-bottom: 50px;
+}
+.third-sec .data-sec{
+    padding:90px 0;
+}
+.third-sec .data-sec .data p{
+    font-size: 28px;
+    color: #4D4E53;
+    border-bottom: 1.5px solid #2C2C2C;
+}
+.third-sec .data-sec .data h2{
+    color: #2C2C2C;
+    font-size: 46px;
+    line-height: 53px;
+    font-weight: 600;
+}
+.third-sec img{
+    border-radius: 22px;
+}
+
+
+/* four-sec */
+
+.four-sec{
+    background-color: #161B1B;
+    padding:72px 0 90px 0;
+}
+.four-sec .img-content-sec{
+    display: flex;
+    gap: 18px;
+    padding-top: 60px;
+    justify-content: space-between;
+    width: 100%;
+}
+.four-sec .img-content-sec .img-content h4{
+    color: #68B2CF;
+    font-size: 28px;
+    line-height: 33px;
+    font-weight: 700;
+    padding: 25px 0;
+}
+.four-sec .img-content-sec .img-content {
+    width: 100%; 
+}
+
+.four-sec .img-content-sec .img-content img {
+    width: 100%;
+    border-radius: inherit;
+    transition: transform 0.5s ease; /* Transition only the transform property */
+}
+
+.four-sec .img-content-sec .img-content img:hover {
+    transform: scale(1.1); /* Zooms in the image by 10% */
+    /* No border-radius specified here, so it retains the original 22px border-radius */
+}
+.four-sec .img-content-sec .img-content .img-wrapper {
+    overflow: hidden; /* Hide overflow to respect border-radius */
+    border-radius: 22px; /* Rounded corners for the wrapper */
+}
+.four-sec .explore{
+    background: #68B2CF;
+    color: #fff;
+    border: 1.5px solid #fff;
+    border-radius: 9px;
+    font-size: 32px;
+    line-height: 36px;
+    padding: 21px 44px;
+    margin-top:22px;
+}
+.four-sec .explore img{
+    margin-right: 5px;
+}
+
+
+/* fifth-sec */
+.fifth-sec{
+    padding: 85px 0px 106px;
+}
+.fifth-sec .service-sec{
+    padding-top:100px;
+    row-gap:20px;
+}
+.fifth-sec .service{
+    position: relative;
+}
+.fifth-sec .service p{
+    position: absolute;
+    bottom:44px;
+    left: 26px;
+    font: 34px;
+    font-weight: 600;
+    line-height: 40px;
+}
+
+/* six-sec */
+.six-sec{
+    background-color: #161B1B;
+    padding:120px 0 250px;
+}
+.six-sec .industries-list{
+    padding-top:70px;
+}
+.six-sec .industries-list p{
+    font-size: 48px;
+    line-height: 54px;
+    font-weight: 600;
+    padding-bottom: 60px;
+}
+
+
+
+/* seven-sec */
+
+.seven-sec{
+    padding-bottom: 75px;
+    background-image: url('/image/bg-8.png');
+}
+.seven-sec .connect{
+    background-color: #68B2CF;
+    padding:70px 0;
+    border-radius: 22px;
+    margin-top:-150px;
+}
+.seven-sec .connect h2{
+    font-size: 46px;
+    line-height: 53px;
+    font-weight: 600;
+    padding-bottom: 50px;
+}
+.seven-sec .connect a{
+    background: #FCF8ED;
+    color: #2C2C2C;
+    font-size: 32px;
+    line-height: 35px;
+    padding: 12px 35px;
+    border-radius: 9px;
+    border: 1.5px solid #000000;
+}
+.seven-sec .connect a img{
+    margin-right: 5px;
+}
+
+
+/* eight-sec */
+
+.eight-sec{
+    background-color: #161B1B;
+    padding: 20px 0;
+}
+.eight-sec p{
+    font-size: 14px;
+    line-height: 26px;
+    max-width: 1135px;
+}
+.eight-sec h4{
+    font-size: 26px;
+    font-weight: 600;
+}
