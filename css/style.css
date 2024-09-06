@@ -7,8 +7,8 @@ body{
     font-weight: 400;
 }
 .container{
-    max-width: 1780px;
-    padding:0 50px;
+    max-width: 100%;
+    padding: 0 100px;
 }
 h1,h2,h3,h4,h5,h6{
     margin:0;
@@ -41,7 +41,7 @@ header nav.main-menu ul li:last-child svg{
     margin-left: 5px;
 }
 header nav.main-menu ul li:last-child {
-    background: #80C6DE;
+    background: #266599;
     color: #fff;
     border-radius: 30px;
     padding: 14px 18px;
@@ -73,11 +73,12 @@ header nav.main-menu ul li:last-child {
     padding-bottom: 20px;
 }
 .bottom-footer{
-    background-color: #161B1B;
+    background-color: #236397;
     padding: 12px 0;
 }
 footer .footer-sec{
     padding: 46px 0 25px 0;
+    background: #EEF7FA;
 }
 .bottom-footer p{
     font-size: 17px;
@@ -100,8 +101,8 @@ footer .footer-sec{
     max-width: 350px;
 }
 .banner-sec a{
-    background: #80C6DE;
-    color: #2B2B2B;
+    background: #266599;
+    color: #FFFFFF;
     padding: 23px 60px;
     border-radius: 90px;
     font-size: 20px;
@@ -110,20 +111,44 @@ footer .footer-sec{
 
 
 /* second-sec */
-
+.second-sec{
+    position: relative;
+}
 .second-sec:before {
-    /* background-color: rgba(238, 247, 250, 1); */
-    background-image: url('../image/sec-2.png');
     content: '';
     display: block;
     width: 600px;
     height: 600px;
     position: relative;
     z-index: 9999;
+    background-color: #68B2CF;
+    border-radius: 100%;
+    opacity: 63%;
+    filter: blur(300px);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.second-sec:after{
+    content: '';
+    display: block;
+    width: 600px;
+    height: 600px;
+    position: relative;
+    z-index: 9999;
+    background-color: #68B2CF;
+    border-radius: 100%;
+    opacity: 63%;
+    filter: blur(300px);
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 .second-sec .icon-box .row{
     border-radius: 22px;
     background-color: #fff;
+    position: relative;
+    z-index: 999999;
 }
 .second-sec .icon-box .icon-content {
     border-radius: 22px;
@@ -155,7 +180,24 @@ footer .footer-sec{
 
 
 /* third-sec */
-
+.third-sec{
+    position: relative;
+}
+.third-sec:before {
+    content: '';
+    display: block;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    z-index: 9999;
+    background-color: #68B2CF;
+    border-radius: 100%;
+    opacity: 39%;
+    filter: blur(200px);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
 .common-title h4 {
     font-size: 26px;
     font-weight: 600;
@@ -167,11 +209,11 @@ footer .footer-sec{
     max-width: 500px;
 }
 .third-sec .about-content a{
-    background: #FFFDF7;
-    border: 1.5px solid #000000;
+    background: #2D6C9D;
+    border: 1.5px solid #2D6C9D;
     padding: 10px 50px;
     border-radius: 10px;
-    color: #2C2C2C;
+    color: #fff;
     font-weight: 600;
 }
 .third-sec .about-content p{
@@ -197,10 +239,36 @@ footer .footer-sec{
 }
 
 
+
+/* dell */
+
+section.dell {
+    background: #007DB8;
+    padding:90px 0;
+}
+.dell .dell-text h1{
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 66px;
+    padding-bottom: 20px;
+}
+.dell .dell-text p{
+    font-size: 26px;
+    line-height: 33px;
+    font-weight: 400;
+}
+.dell .middle-boder{
+    background: #7CCAEF;
+    width: 6px;
+    height: 300px;
+}
+
+
+
 /* four-sec */
 
 .four-sec{
-    background-color: #161B1B;
+    background-color: #236397;
     padding:72px 0 90px 0;
 }
 .four-sec .img-content-sec{
@@ -211,7 +279,7 @@ footer .footer-sec{
     width: 100%;
 }
 .four-sec .img-content-sec .img-content h4{
-    color: #68B2CF;
+    color: #FFFFFF;
     font-size: 28px;
     line-height: 33px;
     font-weight: 700;
@@ -236,14 +304,14 @@ footer .footer-sec{
     border-radius: 22px; /* Rounded corners for the wrapper */
 }
 .four-sec .explore{
-    background: #68B2CF;
-    color: #fff;
+    background: #FAFDFE;
+    color: #256498;
     border: 1.5px solid #fff;
     border-radius: 9px;
     font-size: 32px;
     line-height: 36px;
     padding: 21px 44px;
-    margin-top:22px;
+    margin-top: 22px;
 }
 .four-sec .explore img{
     margin-right: 5px;
@@ -251,6 +319,41 @@ footer .footer-sec{
 
 
 /* fifth-sec */
+section.fifth-sec:before {
+    content: '';
+    display: block;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    z-index: 9999;
+    background-color: #68B2CF;
+    border-radius: 100%;
+    opacity: 39%;
+    filter: blur(200px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+section.fifth-sec:after {
+    content: '';
+    display: block;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    z-index: 9999;
+    background-color: #68B2CF;
+    border-radius: 100%;
+    opacity: 39%;
+    filter: blur(200px);
+    position: absolute;
+    right: 0;
+    top: 10%;
+    z-index: -1;
+}
+section.fifth-sec {
+    position: relative;
+}
 .fifth-sec{
     padding: 85px 0px 106px;
 }
@@ -272,8 +375,8 @@ footer .footer-sec{
 
 /* six-sec */
 .six-sec{
-    background-color: #161B1B;
-    padding:120px 0 250px;
+    background-color: #1F6298;
+    padding: 90px 0 30px;
 }
 .six-sec .industries-list{
     padding-top:70px;
@@ -285,52 +388,39 @@ footer .footer-sec{
     padding-bottom: 60px;
 }
 
-
-
-/* seven-sec */
-
-.seven-sec{
-    padding-bottom: 75px;
-    background-image: url('/image/bg-8.png');
-}
-.seven-sec .connect{
-    background-color: #68B2CF;
+.connect{
+    background-color: #DDF1F8;
     padding:70px 0;
     border-radius: 22px;
-    margin-top:-150px;
+    margin-top:50px
 }
-.seven-sec .connect h2{
+.connect h2{
     font-size: 46px;
     line-height: 53px;
     font-weight: 600;
     padding-bottom: 50px;
 }
-.seven-sec .connect a{
-    background: #FCF8ED;
-    color: #2C2C2C;
+.connect a{
+    background: #1F6298;
+    color: #FFFFFF;
     font-size: 32px;
     line-height: 35px;
     padding: 12px 35px;
     border-radius: 9px;
-    border: 1.5px solid #000000;
+    border: 1.5px solid #1F6298;
 }
-.seven-sec .connect a img{
+.connect a img{
     margin-right: 5px;
 }
-
-
-/* eight-sec */
-
-.eight-sec{
-    background-color: #161B1B;
-    padding: 20px 0;
+.trademarks{
+    padding-top:60px;
 }
-.eight-sec p{
+.trademarks p{
     font-size: 14px;
     line-height: 26px;
     max-width: 1135px;
 }
-.eight-sec h4{
+.trademarks h4{
     font-size: 26px;
     font-weight: 600;
 }
