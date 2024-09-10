@@ -58,6 +58,13 @@ header nav.main-menu ul li:last-child {
 .main-menu ul {
     display: flex;
 }
+header ul li a:hover{
+    color: #27669A;
+}
+
+
+
+
 /* footer */
 .f-menu ul li{
     list-style: none;
@@ -114,9 +121,18 @@ footer .footer-sec{
     border-radius: 90px;
     font-size: 20px;
     font-weight: 600;
+    border:1px solid #266599;
 }
-
-
+.banner-sec a:hover {
+    background: #fff;
+    color: #266599;
+}
+.banner-sec a:hover svg path{
+    fill: #266599;
+}
+.banner-sec a:hover svg{
+    fill: #266599;
+}
 /* second-sec */
 .second-sec{
     position: relative;
@@ -219,10 +235,20 @@ footer .footer-sec{
 .third-sec .about-content a{
     background: #2D6C9D;
     border: 1.5px solid #2D6C9D;
-    padding: 10px 50px;
+    padding: 15px 40px;
     border-radius: 10px;
     color: #fff;
-    font-weight: 600;
+    font-size: 30px;
+    line-height: 35px;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.third-sec .about-content a:hover {
+    background: #fff;
+    color: #2D6C9D;
+}
+.third-sec .about-content a:hover svg path {
+    fill: #2D6C9D;
+    transition: fill 0.3s ease;
 }
 .third-sec .about-content p{
     color: #4D4E53;
@@ -316,10 +342,19 @@ section.dell {
     color: #256498;
     border: 1.5px solid #fff;
     border-radius: 9px;
-    font-size: 32px;
-    line-height: 36px;
-    padding: 21px 44px;
+    font-size: 30px;
+    line-height: 35px;
+    padding: 15px 40px;
     margin-top: 22px;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
+}
+.four-sec .explore:hover {
+    background: #256498;
+    color: #fff;
+}
+.four-sec .explore:hover svg path {
+    fill: #fff;
+    transition: fill 0.3s ease;
 }
 .four-sec .explore img{
     margin-right: 5px;
@@ -413,11 +448,20 @@ section.fifth-sec {
 .connect a{
     background: #1F6298;
     color: #FFFFFF;
-    font-size: 32px;
+    font-size: 30px;
     line-height: 35px;
-    padding: 12px 35px;
+    padding: 15px 40px;
     border-radius: 9px;
     border: 1.5px solid #1F6298;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.connect a:hover {
+    background: #fff;
+    color: #1F6298;
+}
+.connect a:hover svg path {
+    fill: #1F6298;
+    transition: fill 0.3s ease;
 }
 .connect a img{
     margin-right: 5px;
