@@ -9,38 +9,46 @@
 </head>
 <body>
     <header class="site-header">
-       <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <a href="#"><img src="image/logo.png" alt="Site Logo"></a>
-            </div>
-            <nav class="main-menu d-flex align-items-center">
-                <ul class="d-flex align-items-center p-0 m-0 gap-5">
-                    <li><a href="#" class="text-decoration-none">Home</a></li>
-                    <li><a href="#" class="text-decoration-none">Services</a></li>
-                    <li><a href="#" class="text-decoration-none">About</a></li>
-                    <li><a href="#" class="text-decoration-none">Products</a></li>
-                    <li id="get-in-touch">Get in touch <svg width="20" height="25" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7.83789 2.9541L13.1259 8.24214L7.83789 13.5302" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M13.1249 8.24213L1.875 8.24213" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </li>
-                </ul>
-            </nav>
-       </div>
-    </header>
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="logo">
+            <a href="#"><img src="image/logo.png" alt="Site Logo"></a>
+          </div>
+          <nav class="main-menu d-flex align-items-center">
+            <ul class="d-flex align-items-center p-0 m-0 gap-5">
+              <li><a href="#" class="text-decoration-none">Home</a></li>
+              <li><a href="#" class="text-decoration-none">Services</a></li>
+              <li><a href="#" class="text-decoration-none">About</a></li>
+              <li><a href="#" class="text-decoration-none">Products</a></li>
+              <li id="get-in-touch">Get in touch 
+                <svg width="20" height="25" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.83789 2.9541L13.1259 8.24214L7.83789 13.5302" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.1249 8.24213L1.875 8.24213" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </li>
+            </ul>
+          </nav>
+          <button class="menu-toggle" aria-label="Open Menu">
+            <svg width="23" height="13" viewBox="0 0 23 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.5 1H22.5M0.5 12H22.5M0.5 6.5H22.5" stroke="black"/>
+            </svg>  
+          </button>
+        </div>
+      </header>
+      
     <main>
         <section class="banner-sec container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-6 banner-title">
+                <div class="col-md-6 banner-title">
                     <h1>Your Vision, Our Logic.</h1>
                 </div>
-                <div class="col-6 banner-content text-end">
+                <div class="col-md-6 banner-content text-md-end">
                     <img src="image/icon.png">
                     <p class="m-0">Unlock the power of your vision with our logic.</p>
                 </div>
             </div>
             <div class="banner-img pt-4">
-                <img src="image/banner.png" class="w-100">
+                <img src="image/banner.png" class="w-100 d-md-block d-none">
+                <img src="image/banner-m.png" class="w-100 d-md-none d-block">
             </div> 
            <div class="position-absolute translate-middle  start-50">
                 <a href="#" class="text-decoration-none text">Get in touch <svg class="ms-1" width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,8 +60,8 @@
         </section>
         <section class="second-sec pt-5 pb-5">
             <div class="icon-box container">
-                <div class="row p-4">
-                    <div class="col-3">
+                <div class="row p-md-4">
+                    <div class="col-md-3 col-6">
                         <div class="icon-content text-center">
                             <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.8049 0.115564H4.93132C4.28717 0.108026 3.64807 0.229817 3.05202 0.473695C2.45597 0.717573 1.91515 1.07856 1.46169 1.5352C1.00727 1.99005 0.647605 2.5302 0.403447 3.12449C0.159289 3.71877 0.0354727 4.35543 0.0391417 4.99771V20.8387C0.0354727 21.481 0.159289 22.1177 0.403447 22.712C0.647605 23.3062 1.00727 23.8464 1.46169 24.3012C1.91515 24.7579 2.45597 25.1189 3.05202 25.3627C3.64807 25.6066 4.28717 25.7284 4.93132 25.7209H20.8049C22.0872 25.7163 23.3156 25.206 24.2223 24.3011C25.1291 23.3962 25.6405 22.1703 25.645 20.8907V4.94577C25.6405 3.66613 25.1291 2.44019 24.2223 1.53534C23.3156 0.630487 22.0872 0.120126 20.8049 0.115564ZM23.0081 20.7868C22.9949 21.3658 22.7585 21.9174 22.3481 22.3269C21.9378 22.7364 21.3851 22.9723 20.8049 22.9855H4.93132C4.35116 22.9723 3.79842 22.7364 3.38807 22.3269C2.97772 21.9174 2.74135 21.3658 2.72811 20.7868V4.94577C2.74135 4.3668 2.97772 3.81519 3.38807 3.40569C3.79842 2.99618 4.35116 2.76029 4.93132 2.74708H20.8049C21.3851 2.76029 21.9378 2.99618 22.3481 3.40569C22.7585 3.81519 22.9949 4.3668 23.0081 4.94577V20.7868Z" fill="#606060"/>
@@ -64,7 +72,7 @@
                             <p>Device Drivers Development</p>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-md-3 col-6">
                         <div class="icon-content text-center">
                             <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M20.8049 0.115564H4.93132C4.28717 0.108026 3.64807 0.229817 3.05202 0.473695C2.45597 0.717573 1.91515 1.07856 1.46169 1.5352C1.00727 1.99005 0.647605 2.5302 0.403447 3.12449C0.159289 3.71877 0.0354727 4.35543 0.0391417 4.99771V20.8387C0.0354727 21.481 0.159289 22.1177 0.403447 22.712C0.647605 23.3062 1.00727 23.8464 1.46169 24.3012C1.91515 24.7579 2.45597 25.1189 3.05202 25.3627C3.64807 25.6066 4.28717 25.7284 4.93132 25.7209H20.8049C22.0872 25.7163 23.3156 25.206 24.2223 24.3011C25.1291 23.3962 25.6405 22.1703 25.645 20.8907V4.94577C25.6405 3.66613 25.1291 2.44019 24.2223 1.53534C23.3156 0.630487 22.0872 0.120126 20.8049 0.115564ZM23.0081 20.7868C22.9949 21.3658 22.7585 21.9174 22.3481 22.3269C21.9378 22.7364 21.3851 22.9723 20.8049 22.9855H4.93132C4.35116 22.9723 3.79842 22.7364 3.38807 22.3269C2.97772 21.9174 2.74135 21.3658 2.72811 20.7868V4.94577C2.74135 4.3668 2.97772 3.81519 3.38807 3.40569C3.79842 2.99618 4.35116 2.76029 4.93132 2.74708H20.8049C21.3851 2.76029 21.9378 2.99618 22.3481 3.40569C22.7585 3.81519 22.9949 4.3668 23.0081 4.94577V20.7868Z" fill="#606060"/>
@@ -76,7 +84,7 @@
                                 Development</p>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-md-3 col-6">
                         <div class="icon-content text-center">
                             <svg width="93" height="94" viewBox="0 0 93 94" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M48.6796 59.4638L58.6939 49.4495C59.3494 48.7925 59.7176 47.9023 59.7176 46.9742C59.7176 46.046 59.3494 45.1558 58.6939 44.4988L48.6804 34.4854C48.0234 33.8298 47.1332 33.4616 46.2051 33.4616C45.2769 33.4616 44.3867 33.8298 43.7297 34.4854L33.7155 44.4996C33.0599 45.1566 32.6917 46.0468 32.6917 46.975C32.6917 47.9031 33.0599 48.7933 33.7155 49.4503L43.7289 59.4638C44.3859 60.1193 45.2761 60.4875 46.2043 60.4875C47.1324 60.4875 48.0226 60.1193 48.6796 59.4638ZM35.3657 46.1499L39.5477 41.9679L42.8144 45.2345C43.0346 45.4465 43.3292 45.5637 43.6349 45.5608C43.9406 45.5578 44.2329 45.4351 44.4491 45.2189C44.6653 45.0028 44.788 44.7104 44.7909 44.4047C44.7937 44.0991 44.6766 43.8044 44.4646 43.5842L41.198 40.3176L45.38 36.1356C45.5989 35.9171 45.8957 35.7943 46.2051 35.7943C46.5145 35.7943 46.8112 35.9171 47.0302 36.1356L57.0436 46.149C57.2622 46.368 57.3849 46.6648 57.3849 46.9742C57.3849 47.2836 57.2622 47.5803 57.0436 47.7993L55.9236 48.9193L52.518 45.5137C52.2977 45.3017 52.0031 45.1845 51.6974 45.1874C51.3917 45.1903 51.0994 45.3131 50.8832 45.5292C50.6671 45.7454 50.5444 46.0378 50.5415 46.3435C50.5386 46.6491 50.6558 46.9438 50.8678 47.164L54.2734 50.5696L49.7997 55.0433L46.394 51.6376C46.1738 51.4256 45.8792 51.3085 45.5735 51.3114C45.2678 51.3143 44.9755 51.437 44.7593 51.6532C44.5431 51.8694 44.4204 52.1617 44.4175 52.4674C44.4146 52.7731 44.5318 53.0677 44.7438 53.2879L48.1494 56.6935L47.0294 57.8135C46.8104 58.0321 46.5137 58.1548 46.2043 58.1548C45.8949 58.1548 45.5981 58.0321 45.3791 57.8135L35.3657 47.8001C35.1472 47.5811 35.0244 47.2844 35.0244 46.975C35.0244 46.6656 35.1472 46.3688 35.3657 46.1499Z" fill="#606060"/>
@@ -87,7 +95,7 @@
                             <p>Firmware Development</p>
                         </div>
                     </div>
-                    <div class="col-3">
+                    <div class="col-md-3 col-6">
                         <div class="icon-content text-center">
                             <svg width="68" height="77" viewBox="0 0 68 77" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M67.9825 43.7919C68.0861 43.272 67.7178 42.776 67.1912 42.7252C65.9634 42.6063 65.0376 41.5834 65.0376 40.346C65.0376 39.1115 65.9634 38.0912 67.1912 37.9723C67.7194 37.9212 68.0858 37.4242 67.9825 36.9059C67.5301 34.6366 66.6511 32.5135 65.3695 30.5959C65.0762 30.1568 64.4658 30.0647 64.0564 30.4028C63.1348 31.1637 61.7444 31.1327 60.8565 30.2442C59.9828 29.3737 59.9141 27.9977 60.6968 27.0435C61.0306 26.6364 60.9436 26.0271 60.5036 25.7318C58.5958 24.4514 56.476 23.5715 54.2027 23.1165C53.685 23.0121 53.1875 23.3801 53.1367 23.9081C53.0572 24.7295 52.5739 25.4141 51.8944 25.7789V8.11777C51.8946 3.64156 48.2556 0 43.7824 0H17.1191C12.646 0 9.00694 3.64156 9.00694 8.11777V19.6977H3.87724C1.73936 19.6977 0 21.4382 0 23.5776V34.6203C0 36.7594 1.73936 38.5 3.87724 38.5H9.00694V68.8822C9.00694 73.3584 12.646 77 17.1191 77H43.7824C48.2556 77 51.8946 73.3583 51.8946 68.882V54.9185C52.5741 55.2833 53.0574 55.9679 53.1369 56.7895C53.1875 57.3141 53.6802 57.6846 54.2025 57.5811C56.4707 57.1283 58.5921 56.2485 60.5081 54.9664C60.9477 54.6723 61.0381 54.0613 60.7008 53.6523C59.9154 52.6995 59.9823 51.3241 60.8593 50.4502C61.7455 49.5597 63.1362 49.5334 64.0582 50.2905C64.4678 50.627 65.0766 50.5344 65.3695 50.096C66.6506 48.1794 67.5296 46.0582 67.9825 43.7919ZM17.1191 1.7907H43.7824C47.2687 1.7907 50.1052 4.62895 50.1052 8.11777V9.84884H10.7964V8.11777C10.7964 4.62895 13.6327 1.7907 17.1191 1.7907ZM1.78947 34.6201V26.8605H5.36841C5.86248 26.8605 6.26314 26.4595 6.26314 25.9651C6.26314 25.4707 5.86248 25.0698 5.36841 25.0698H1.78947V23.5776C1.78947 22.4256 2.72608 21.4884 3.87724 21.4884H23.8595C25.0107 21.4884 25.9473 22.4254 25.9473 23.5776V32.2326H17.8947C17.4006 32.2326 17 32.6335 17 33.1279C17 33.6223 17.4006 34.0233 17.8947 34.0233H25.9473V34.6201C25.9473 35.772 25.0107 36.7093 23.8595 36.7093H3.87724C2.72608 36.7093 1.78947 35.7722 1.78947 34.6201ZM23.8595 38.5C25.9974 38.5 27.7368 36.7594 27.7368 34.6201V23.5774C27.7368 21.4381 25.9974 19.6975 23.8595 19.6975H10.7964V11.6394H50.1052V25.9717C49.1811 25.7098 48.4839 24.9095 48.3871 23.9081C48.3361 23.3786 47.8379 23.0124 47.3211 23.1165C45.0481 23.5713 42.928 24.4513 41.02 25.7318C40.5812 26.0264 40.4921 26.6352 40.8269 27.0435C41.6096 27.9977 41.5409 29.3737 40.6657 30.2458C39.7821 31.1302 38.3915 31.1657 37.4676 30.403C37.0581 30.0649 36.4477 30.157 36.1544 30.596C34.873 32.5137 33.994 34.6367 33.5415 36.9061C33.438 37.4249 33.8051 37.9214 34.3328 37.9725C35.5605 38.0914 36.4864 39.1117 36.4864 40.3462C36.4864 41.5836 35.5605 42.6064 34.3328 42.7253C33.8054 42.7762 33.438 43.2727 33.5415 43.792C33.9944 46.0584 34.8734 48.1796 36.1544 50.0964C36.4485 50.5362 37.0574 50.6262 37.4658 50.2908C38.3845 49.5364 39.7744 49.5558 40.6673 50.4534C41.5411 51.3239 41.6098 52.7001 40.8271 53.6541C40.4921 54.0624 40.5814 54.6721 41.0213 54.9665C42.9364 56.248 45.056 57.1276 47.3213 57.5813C47.8442 57.6845 48.3366 57.3145 48.3873 56.7895C48.4841 55.7879 49.1811 54.9877 50.1053 54.7259V60.8837H10.7964V38.5H23.8595ZM43.7824 75.2093H17.1191C13.6327 75.2093 10.7964 72.3709 10.7964 68.8822V62.6744H50.1052V68.882C50.1052 72.3709 47.2687 75.2093 43.7824 75.2093ZM64.344 48.3671C62.8009 47.6322 60.8865 47.8854 59.5942 49.1842C58.3061 50.4676 58.0177 52.3752 58.7755 53.9426C57.503 54.6961 56.1387 55.2616 54.7025 55.6311C54.1299 53.989 52.5793 52.8435 50.7646 52.8435C48.9474 52.8435 47.3948 53.9886 46.8218 55.6307C45.3872 55.2611 44.024 54.6952 42.752 53.9417C44.0931 51.1554 42.0202 47.9599 38.9789 47.9599C38.3535 47.9599 37.7379 48.1012 37.18 48.3669C36.4259 47.0932 35.8601 45.728 35.4906 44.2915C37.1315 43.7179 38.2759 42.1643 38.2759 40.3459C38.2759 38.5297 37.1311 36.9783 35.4902 36.4054C35.8595 34.9671 36.4252 33.601 37.1793 32.3264C37.7372 32.593 38.353 32.7347 38.9793 32.7347C42.0336 32.7347 44.0881 29.53 42.7519 26.7548C44.0201 26.0022 45.3833 25.4367 46.8218 25.0665C47.3948 26.7086 48.9474 27.8539 50.7648 27.8539C52.5795 27.8539 54.13 26.7088 54.7025 25.0665C56.141 25.4367 57.5044 26.0022 58.7724 26.7548C57.4357 29.5309 59.4913 32.7347 62.545 32.7347C63.1713 32.7347 63.7869 32.593 64.345 32.3264C65.0991 33.601 65.6648 34.9671 66.0341 36.4054C64.3932 36.9783 63.2485 38.5299 63.2485 40.3459C63.2485 42.1643 64.393 43.7179 66.0338 44.2915C65.6639 45.728 65.0981 47.0932 64.344 48.3671Z" fill="#606060"/>
@@ -101,32 +109,32 @@
         <section class="third-sec">
             <div class="container">
                 <div class="row">
-                    <div class="col-6 common-title">
+                    <div class="col-md-6 common-title">
                         <h4>ABOUT</h4>
                         <h3>At IndiLogic LLC (USA), we are committed to delivering high-quality products and services to our clients.</h3>
                     </div>
                 </div>
                 <div class="row align-items-center pt-4 about-content">
-                    <div class="col-md-6">
+                    <div class="col-md-6 pe-md-5">
                         <img src="image/about.png" class="w-100">
                     </div>
-                    <div class="col-md-6 ps-5">
+                    <div class="col-md-6 ps-md-5">
                         <p>Established in 2012 in Texas, USA, we have dedicated over 12 years to achieving excellence in Windows application development, embedded applications, and firmware development.</p>
                         <p>As a privately funded and privately owned company, we have experienced exponential growth, generating multimillion-dollar revenues.</p>
                         <a href="#" class="text-decoration-none"><img src="image/arrow-white.svg" class="pe-2">Explore</a>
                     </div>
                 </div>
                 <div class="row data-sec g-3">
-                    <div class="col-6">
+                    <div class="col-md-6 pe-md-5">
                         <div class="data">
                             <p  class="pb-2">A strong experience  of</p>
-                            <h2 class="pt-2">15+ Years</h2>
+                            <h2 class="pt-md-2">15+ Years</h2>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6 ps-md-5">
                         <div class="data">
                             <p class="pb-2">Products installed </p>
-                            <h2 class="pt-2">16+ Million</h2>
+                            <h2 class="pt-md-2">16+ Million</h2>
                         </div>
                     </div>
                 </div>
@@ -189,25 +197,25 @@
                     <h3 class="mw-100">We embrace creativity and innovation, pushing technology's boundaries to deliver cutting-edge solutions.                    </h3>
                 </div>
                 <div class="row service-sec">
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <div class="service">
                             <img src="image/service-1.png" class="w-100">
                             <p class="text-white">Device Drivers Development</p>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <div class="service">
                             <img src="image/service-2.png" class="w-100">
                             <p class="text-white">Desktop Application Development</p>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <div class="service">
                             <img src="image/service-3.png" class="w-100">
                             <p class="text-white">Firmware/IoT Development</p>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6">
                         <div class="service">
                             <img src="image/service-4.png" class="w-100">
                             <p class="text-white">Mobile Application Development</p>
@@ -221,22 +229,16 @@
                 <div class="common-title text-white">
                     <h4>INDUSTRIES WE WORK WITH</h4>
                 </div>
-                <div class="row industries-list text-white">
-                    <div class="col-4">
-                        <p>Automobile</p>
-                        <p>Pharam</p>
-                        <p>Mining</p>
-                    </div>
-                    <div class="col-4">
-                        <p>Hospitality</p>
-                        <p>Manufacturing</p>
-                        <p>Legal</p>
-                    </div>
-                    <div class="col-4">
-                        <p>Medical</p>
-                        <p>FMCG</p>
-                        <p>Accounting</p>
-                    </div>
+                <div class="industries-list text-white">
+                    <p>Automobile</p>
+                    <p>Pharam</p>
+                    <p>Mining</p>
+                    <p>Hospitality</p>
+                    <p>Manufacturing</p>
+                    <p>Legal</p>
+                    <p>Medical</p>
+                    <p>FMCG</p>
+                    <p>Accounting</p>
                 </div>
                 <div class="connect text-center">
                     <h2>How can we help you? Lets connect.</h2>
@@ -254,18 +256,18 @@
         <div class="footer-sec">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
-                        <img src="image/footer-logo.png">
-                        <div class="social-icon">
+                    <div class="col-md-6">
+                        <img src="image/footer-logo.png" class="f-logo ">
+                        <div class="social-icon d-md-block d-none">
                             <a href="#"><img src="image/Facebook.png"></a>
                             <a href="#"><img src="image/Linkedin.png"></a>
                             <a href="#"><img src="image/Twitter.png"></a>
                             <a href="#"><img src="image/Instagram.png"></a>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="row">
-                            <div class="col-6">
+                    <div class="col-md-6">
+                        <div class="row f-menu-add">
+                            <div class="col-md-6">
                                 <div class="f-menu">
                                     <h5 class="f-title">Navigation</h5>
                                     <ul class="m-0 p-0">
@@ -278,11 +280,17 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div class="col-md-6">
                                 <div class="f-address">
                                     <h5 class="f-title">Locations</h5>
                                     <p><b>USA:</b> IndiLogic LLC, Creek Bend Office Condominiums, 930 South Bell Blvd, Suite 302 Cedar Park, TX 78613, USA</p>
                                     <p><b>INDIA:</b> IndiLogic Pvt. Ltd. , 8th Floor, Supertech Astril, Business No. 3, Office No. 816, Sector.94, Noida, Gautam Buddha Nagar, Uttar Pradesh, Pin: 201301</p>
+                                </div>
+                                <div class="social-icon d-md-none d-block">
+                                    <a href="#"><img src="image/Facebook.png"></a>
+                                    <a href="#"><img src="image/Linkedin.png"></a>
+                                    <a href="#"><img src="image/Twitter.png"></a>
+                                    <a href="#"><img src="image/Instagram.png"></a>
                                 </div>
                             </div>
                         </div>
@@ -295,5 +303,6 @@
         </div>
     </footer>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

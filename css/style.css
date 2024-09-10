@@ -49,8 +49,15 @@ header nav.main-menu ul li:last-child {
     font-size: 16px;
     line-height: 14px;
 }
-
-
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.main-menu ul {
+    display: flex;
+}
 /* footer */
 .f-menu ul li{
     list-style: none;
@@ -182,6 +189,7 @@ footer .footer-sec{
 /* third-sec */
 .third-sec{
     position: relative;
+    overflow: hidden;
 }
 .third-sec:before {
     content: '';
@@ -353,6 +361,7 @@ section.fifth-sec:after {
 }
 section.fifth-sec {
     position: relative;
+    overflow: hidden;
 }
 .fifth-sec{
     padding: 85px 0px 106px;
@@ -368,7 +377,7 @@ section.fifth-sec {
     position: absolute;
     bottom:44px;
     left: 26px;
-    font: 34px;
+    font-size: 34px;
     font-weight: 600;
     line-height: 40px;
 }
@@ -380,6 +389,8 @@ section.fifth-sec {
 }
 .six-sec .industries-list{
     padding-top:70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .six-sec .industries-list p{
     font-size: 48px;
@@ -387,7 +398,6 @@ section.fifth-sec {
     font-weight: 600;
     padding-bottom: 60px;
 }
-
 .connect{
     background-color: #DDF1F8;
     padding:70px 0;
@@ -424,3 +434,275 @@ section.fifth-sec {
     font-size: 26px;
     font-weight: 600;
 }
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        padding: 0 50px;
+    }
+    .six-sec .industries-list p{
+        font-size: 32px;
+        line-height: 44px;
+        padding-bottom: 40px;
+    }
+    .fifth-sec .service p{
+        bottom: 25px;
+        left: 15px;
+        font-size: 26px;
+    }
+    .six-sec .industries-list{
+        padding-top: 50px;
+    }
+    .dell .dell-text h1{
+        font-size: 42px;
+        line-height: 56px;
+    }
+    .dell .dell-text p{
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .second-sec{
+        margin-top:50px;
+    }
+}
+@media (max-width: 767px) {
+    /* header */
+    .main-menu ul {
+        display: none !important; /* Hide menu initially */
+        flex-direction: column !important;
+        gap: 20px !important;
+      }
+    
+      .menu-toggle {
+        display: block; /* Show menu toggle button */
+      }
+    
+      /* Open the menu when active */
+      .main-menu.active ul {
+        display: flex !important;
+        position: absolute;
+        height: 100%;
+        background: #EEF7FA;
+        left: 0;
+        width: 100%;
+        top: 100px;
+        z-index: 99999;
+    }
+    
+      .logo {
+        margin-bottom: 20px;
+      }
+
+
+
+
+    .container {
+        padding: 0 20px;
+    }
+    .banner-sec .banner-title h1{
+        display: none;
+    }
+    .banner-sec .banner-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding-top:10px;
+        justify-content: space-between;
+    }
+    .banner-sec .banner-content p{
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+    }
+    .banner-sec a{
+        padding: 15px 23px;
+    }
+    .second-sec .icon-box .icon-content{
+        padding: 0;
+    }
+    .second-sec .icon-box .icon-content p{
+        font-size: 18px;
+        line-height: 21px;
+        padding-top:7px;
+        color: #000;
+    }
+    .second-sec .icon-box .row{
+        background-color: transparent;
+        row-gap: 40px;
+    }
+    .second-sec .icon-box .icon-content svg path{
+        fill:#000;
+    }
+    .second-sec:before{
+        width: 200px;
+        height: 200px;
+        right: -67px;
+        top: -50px;
+        opacity: 33%;
+        filter: blur(60px);
+    }
+    .second-sec:after{
+        width: 200px;
+        height: 200px;
+        opacity: 33%;
+        filter: blur(80px);
+        left: -50px;
+        bottom: 0;
+        top:inherit;
+    }
+    .common-title{
+        text-align: center;
+    }
+    .common-title h4 {
+        font-size: 16px;
+        padding-bottom: 13px;
+        line-height: 16px;
+    }
+    .common-title h3{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .third-sec{
+        padding-top:25px;
+    }
+    .icon-box{
+        padding-top:50px;
+    }
+    .third-sec .about-content p{
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 0px;
+        text-align: center;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+    .third-sec .about-content a{
+        margin: 0 auto;
+        display: table;
+        margin: 30px auto 0;
+        padding: 8px 30px;
+    }
+    .third-sec .data-sec{
+        padding: 50px 0;
+        text-align: center;
+        row-gap: 30px;
+    }
+    .third-sec .data-sec .data p{
+        font-size: 18px;
+    }
+    .third-sec .data-sec .data h2{
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .dell .dell-text h1{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .dell .dell-text p{
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .dell img{
+        width: 100%;
+    }
+    section.dell{
+        padding: 50px 0;
+    }
+    .dell .middle-boder{
+        width: 2px;
+    }
+    .four-sec .img-content-sec{
+        text-align: center;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    .four-sec .img-content-sec .img-content h4{
+        font-size: 16px;
+        line-height: 26px;
+        padding: 10px 0;
+    }
+    .four-sec .img-content-sec .img-content p{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .four-sec .explore{
+        padding: 8px 25px;
+        font-size: 20px;
+        line-height: 30px;
+        display: table;
+        margin:40px auto 0;
+    }
+    .fifth-sec .service p{
+        font-size: 20px;
+        line-height: 30px;
+        right: 0;
+        text-align: center;
+        left: 0;
+        bottom: 10px;
+    }
+    .fifth-sec .service-sec{
+        padding-top:50px;
+    }
+    .fifth-sec{
+        padding: 50px 0px 50px;
+    }
+    .six-sec .industries-list{
+        grid-template-columns: 50% 50%;
+        padding-top: 23px;
+    }
+    .six-sec .industries-list p {
+        font-size: 18px;
+        line-height: 28px;
+        padding-bottom: 16px;
+        text-align: center;
+    }
+    .six-sec {
+        padding: 30px 0px;
+    }
+    .connect{
+        margin-top: 22px;
+    }
+    .connect h2{
+        font-size: 26px;
+        line-height: 29px;
+        padding-bottom: 20px;
+    }
+    .connect {
+        padding: 30px 10px;
+    }
+    .connect a{
+        font-size: 22px;
+        padding: 8px 28px;
+    }
+    .trademarks {
+        padding-top: 40px;
+    }
+    .six-sec .common-title h4{
+        font-size: 22px;
+    }
+    .f-title{
+        padding-bottom: 10px;
+    }
+    .footer-sec .f-logo{
+        padding-bottom: 50px;
+        display: block;
+        margin: 0 auto;
+    }
+    .footer-sec .f-menu-add{
+        row-gap: 30px;
+        text-align: center;
+    }
+    .bottom-footer p {
+        font-size: 14px;
+    }
+    .third-sec:before{
+        filter: blur(80px);
+        width: 200px;
+        height: 200px;
+        right: -24px;
+        bottom: -35px;
+    }
+    .second-sec{
+       overflow: hidden;
+    }
+  }
