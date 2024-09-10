@@ -45,7 +45,7 @@ header nav.main-menu ul li:last-child {
     background: #266599;
     color: #fff;
     border-radius: 30px;
-    padding: 14px 18px;
+    padding: 14px 25px;
     font-family: 'Titillium Web';
     font-size: 16px;
     line-height: 14px;
@@ -484,7 +484,11 @@ section.fifth-sec {
     font-size: 26px;
     font-weight: 600;
 }
-
+@media only screen and (max-width: 1364px) {
+   .dell img{
+    width: 100%;
+   }
+}
 @media only screen and (max-width: 1024px) {
     .container {
         padding: 0 50px;
@@ -629,7 +633,7 @@ section.fifth-sec {
         padding: 8px 30px;
     }
     .third-sec .data-sec{
-        padding: 50px 0;
+        padding: 50px;
         text-align: center;
         row-gap: 30px;
     }
