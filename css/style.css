@@ -580,7 +580,7 @@ section.fifth-sec {
         row-gap: 40px;
     }
     .second-sec .icon-box .icon-content svg path{
-        fill:#000;
+        fill:#606060;
     }
     .second-sec:before{
         width: 200px;
