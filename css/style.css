@@ -106,6 +106,11 @@ footer .footer-sec{
     padding-bottom: 72px;
     position: relative;
 }
+.banner-sec svg{
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+}
 .banner-sec .banner-title h1 {
     font-size: 40px;
     font-weight: 600;
@@ -172,6 +177,7 @@ footer .footer-sec{
     position: absolute;
     left: 0;
     top: 0;
+    z-index: -1;
 }
 .second-sec .icon-box .row{
     border-radius: 22px;
@@ -229,14 +235,21 @@ footer .footer-sec{
     bottom: 0;
 }
 .common-title h4 {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 600;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 .common-title h3 {
     color: #2C2C2C;
     font-weight: 600;
-    max-width: 500px;
+    max-width: 700px;
+    font-size: 38px;
+    line-height: 47px;
+}
+.fifth-sec .common-title h3{
+    font-size: 47px;
+    line-height: 54px;
+    max-width: 1300px;
 }
 .third-sec .about-content a{
     background: #2D6C9D;
@@ -427,6 +440,20 @@ section.fifth-sec {
 .six-sec{
     background-color: #1F6298;
     padding: 90px 0 30px;
+    position: relative;
+}
+section.six-sec:before {
+    background: #68B2CFA1;
+    width: 500px;
+    height: 500px;
+    content: '';
+    display: block;
+    border-radius: 100%;
+    opacity: 0.63;
+    filter: blur(150px);
+    position: absolute;
+    top: -100px;
+    left: -100px;
 }
 .six-sec .industries-list{
     padding-top:70px;
@@ -548,6 +575,14 @@ section.fifth-sec {
     .container {
         padding: 0 20px;
     }
+    .fifth-sec .common-title h3{
+        font-size: 18px;
+        line-height: 20px;
+        max-width: 1300px;
+    }
+    section.six-sec:before{
+        display: none;
+    }
     .banner-sec .banner-title h1{
         display: none;
     }
@@ -566,6 +601,12 @@ section.fifth-sec {
     }
     .banner-sec a{
         padding: 15px 23px;
+        font-size: 17px;
+    }
+    .banner-sec svg {
+        width: 22px;
+        height: 22px;
+        margin-top: 4px;
     }
     .second-sec .icon-box .icon-content{
         padding: 20px;
@@ -604,8 +645,8 @@ section.fifth-sec {
         text-align: center;
     }
     .common-title h4 {
-        font-size: 16px;
-        padding-bottom: 13px;
+        font-size: 14px;
+        padding-bottom: 10px;
         line-height: 16px;
     }
     .common-title h3{
@@ -630,7 +671,13 @@ section.fifth-sec {
         margin: 0 auto;
         display: table;
         margin: 30px auto 0;
-        padding: 8px 30px;
+        padding: 5px 30px;
+        font-size: 20px;
+    }
+    .third-sec .about-content a svg, .four-sec .explore svg, .connect a svg{
+        width: 15px;
+        height: 15px;
+        margin-right: 10px !important;
     }
     .third-sec .data-sec{
         padding: 50px;
@@ -721,8 +768,8 @@ section.fifth-sec {
         padding: 30px 10px;
     }
     .connect a{
-        font-size: 22px;
-        padding: 8px 28px;
+        font-size: 20px;
+        padding: 5px 28px;
     }
     .trademarks {
         padding-top: 40px;
@@ -750,9 +797,35 @@ section.fifth-sec {
         width: 200px;
         height: 200px;
         right: -24px;
-        bottom: -35px;
+        bottom: inherit;
+        top:40%;
+        transform: translateY(-50%);
     }
-    .second-sec{
+    main{
        overflow: hidden;
+       position: relative;
+    }
+    .fifth-sec .container, .third-sec .container{
+        padding: 0 50px;
+    }
+    .four-sec{
+        padding: 72px 30px 90px;
+    }
+    section.fifth-sec:after{
+        width: 300px;
+        height: 300px;
+        opacity: 70%;
+        filter: blur(150px);
+        right: 0;
+        bottom: 0;
+        top:inherit;
+    }
+    section.fifth-sec:before{
+        width: 400px;
+        height: 400px;
+        opacity: 40%;
+        filter: blur(150px);
+        right: 0;
+        left: inherit;
     }
   }
