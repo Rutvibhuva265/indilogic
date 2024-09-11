@@ -99,7 +99,18 @@ footer .footer-sec{
     font-size: 17px;
     line-height: 22px;
 }
-
+footer .first-sec-footer{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+footer .social-icon a:not(:first-child) {
+    margin-left: 25px;
+}
+.social-icon {
+    margin-bottom: 20px;
+}
 /* banner-sec */
 .banner-sec{
     padding-top:32px;
