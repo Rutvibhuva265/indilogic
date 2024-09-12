@@ -71,9 +71,12 @@ header ul li a:hover{
     list-style: none;
 }
 .f-menu ul li a{
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 36px;
     color: #242424;
+}
+.f-menu ul li a:hover {
+    color: #1F6298;
 }
 .f-title{
     font-size: 22px;
@@ -82,8 +85,8 @@ header ul li a:hover{
     padding-bottom: 22px;
 }
 .f-address p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 24px;
     color: #242424;
     padding-bottom: 20px;
 }
@@ -325,6 +328,8 @@ section.dell {
     background: #7CCAEF;
     width: 6px;
     height: 300px;
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -433,7 +438,7 @@ section.fifth-sec {
 }
 .fifth-sec .service-sec{
     padding-top:100px;
-    row-gap:20px;
+    row-gap:80px;
 }
 .fifth-sec .service{
     position: relative;
@@ -521,10 +526,63 @@ section.six-sec:before {
     font-size: 26px;
     font-weight: 600;
 }
+@media only screen and (min-width: 1920px) and (max-width: 2200px) {
+    body{
+        font-size: 34px;
+        line-height: 50px;
+    }
+    .banner-sec .banner-content {
+        max-width: 400px;
+    }
+}
 @media only screen and (max-width: 1364px) {
    .dell img{
     width: 100%;
    }
+}
+@media only screen and (max-width: 991px) {
+    .common-title h3{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .third-sec .about-content p{
+        margin-bottom: 25px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .banner-sec .banner-title h1{
+        line-height: 40px;
+    }
+    .second-sec .icon-box .icon-content p{
+        line-height: 25px;
+        padding-top: 5px;
+        font-size: 20px;
+    }
+        /* header */
+        .main-menu ul {
+            display: none !important; /* Hide menu initially */
+            flex-direction: column !important;
+            gap: 20px !important;
+          }
+        
+          .menu-toggle {
+            display: block; /* Show menu toggle button */
+          }
+        
+          /* Open the menu when active */
+          .main-menu.active ul {
+            display: flex !important;
+            position: absolute;
+            height: 100%;
+            background: #EEF7FA;
+            left: 0;
+            width: 100%;
+            top: 80px;
+            z-index: 99999;
+        }
+        header{
+            padding: 15px 0;
+        }
 }
 @media only screen and (max-width: 1024px) {
     .container {
@@ -536,52 +594,53 @@ section.six-sec:before {
         padding-bottom: 40px;
     }
     .fifth-sec .service p{
-        bottom: 25px;
-        left: 15px;
-        font-size: 26px;
+        bottom: 10px;
+        left: 0px;
+        font-size: 25px;
+        right: 0;
+        text-align: center;
+        line-height: 30px;
     }
     .six-sec .industries-list{
         padding-top: 50px;
     }
+    .fifth-sec .service-sec {
+        padding-top: 60px;
+        row-gap: 30px;
+    }
     .dell .dell-text h1{
-        font-size: 42px;
-        line-height: 56px;
+        font-size: 38px;
+        line-height: 48px;
+    }
+    .fifth-sec .common-title h3{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .common-title h4{
+        font-size: 18px;
+        padding-bottom: 10px;
     }
     .dell .dell-text p{
         font-size: 20px;
         line-height: 30px;
     }
+    .four-sec .img-content-sec .img-content h4{
+        font-size: 24px;
+        line-height: 28px;
+        padding: 18px 0;
+    }
+    .four-sec .img-content-sec .img-content p{
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .four-sec .img-content-sec{
+        padding-top:40px;
+    }
+    .second-sec{
+        margin-top: 50px !important;
+    }
 }
 @media (max-width: 767px) {
-    /* header */
-    .main-menu ul {
-        display: none !important; /* Hide menu initially */
-        flex-direction: column !important;
-        gap: 20px !important;
-      }
-    
-      .menu-toggle {
-        display: block; /* Show menu toggle button */
-      }
-    
-      /* Open the menu when active */
-      .main-menu.active ul {
-        display: flex !important;
-        position: absolute;
-        height: 100%;
-        background: #EEF7FA;
-        left: 0;
-        width: 100%;
-        top: 80px;
-        z-index: 99999;
-    }
-    header{
-        padding: 15px 0;
-    }
-
-
-
-
     .container {
         padding: 0 20px;
     }
@@ -594,7 +653,10 @@ section.six-sec:before {
         display: none;
     }
     .banner-sec .banner-title h1{
-        display: none;
+        max-width: 100%;
+        padding-top: 30px;
+        font-size: 30px;
+        line-height: 30px;
     }
     .banner-sec .banner-content {
         max-width: 100%;
@@ -605,9 +667,10 @@ section.six-sec:before {
         justify-content: space-between;
     }
     .banner-sec .banner-content p{
-        font-size: 20px;
+        font-size: 22px;
         line-height: 24px;
         font-weight: 600;
+        max-width: 250px;
     }
     .banner-sec a{
         padding: 15px 23px;
@@ -838,4 +901,16 @@ section.six-sec:before {
         right: 0;
         left: inherit;
     }
-  }
+    .second-sec {
+        margin-top: 0px !important;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .second-sec .icon-box .icon-content {
+        padding: 5px;
+    }
+    .banner-sec .banner-content p{
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
