@@ -8,7 +8,7 @@ body{
 }
 .container{
     max-width: 100%;
-    padding: 0 100px;
+    padding: 0 150px;
 }
 h1,h2,h3,h4,h5,h6{
     margin:0;
@@ -527,7 +527,7 @@ section.six-sec:before {
     font-weight: 600;
 }
 
-@media only screen and (min-width: 1920px) and (max-width: 2200px) {
+@media only screen and (min-width: 1921px) and (max-width: 2200px) {
     body{
         font-size: 34px;
         line-height: 50px;
@@ -654,10 +654,11 @@ section.six-sec:before {
         display: none;
     }
     .banner-sec .banner-title h1{
-        max-width: 100%;
+        /* max-width: 100%;
         padding-top: 30px;
         font-size: 30px;
-        line-height: 30px;
+        line-height: 30px; */
+        display: none;
     }
     .banner-sec .banner-content {
         max-width: 100%;
@@ -781,6 +782,7 @@ section.six-sec:before {
     }
     .dell .middle-boder{
         width: 2px;
+        height: 250px;
     }
     .four-sec .img-content-sec{
         text-align: center;
