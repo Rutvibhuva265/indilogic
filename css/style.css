@@ -7,8 +7,8 @@ body{
     font-weight: 400;
 }
 .container{
-    max-width: 100%;
-    padding: 0 150px;
+    max-width: 1700px;
+    padding: 0 50px;
 }
 h1,h2,h3,h4,h5,h6{
     margin:0;
