@@ -537,6 +537,16 @@ section.six-sec:before {
         max-width: 400px;
     }
 }
+@media only screen and (max-width: 1500px) {
+    .container{
+        padding: 0 150px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .container {
+        padding: 0 50px;
+    }
+}
 @media only screen and (max-width: 1364px) {
    .dell img{
     width: 100%;
