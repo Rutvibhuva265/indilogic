@@ -286,6 +286,7 @@ footer .social-icon a:not(:first-child) {
 .third-sec .about-content p{
     color: #4D4E53;
     margin-bottom: 50px;
+    max-width: 700px;
 }
 .third-sec .data-sec{
     padding:90px 0;
@@ -740,7 +741,6 @@ section.six-sec:before {
         margin-bottom: 0px;
         text-align: center;
         margin-top: 20px;
-        padding: 0 10px;
     }
     .third-sec .about-content a{
         margin: 0 auto;
