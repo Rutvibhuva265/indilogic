@@ -20,3 +20,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+
+
+$(document).ready(function() {
+  // Set default zoom for the first img-content
+  $('.default-zoom').css('width', '100%');
+
+  $('.img-content').hover(function() {
+      // Increase width of hovered item and decrease width of others
+      $('.img-content').not(this).stop().css('width', '60%');
+      $(this).stop().css('width', '100%');
+  }, function() {
+      // Reset all items to default sizes
+      $('.img-content').stop().css('width', '60%');
+      $('.default-zoom').stop().css('width', '100%');
+  });
+});
