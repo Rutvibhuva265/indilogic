@@ -7,7 +7,7 @@ body{
     font-weight: 400;
 }
 .container{
-    max-width: 1700px;
+    max-width: 1450px;
     padding: 0 50px;
 }
 h1,h2,h3,h4,h5,h6{
@@ -464,7 +464,7 @@ section.fifth-sec {
 /* six-sec */
 .six-sec{
     background-color: #1F6298;
-    padding: 90px 0 30px;
+    padding: 90px 0;
     position: relative;
 }
 section.six-sec:before {
@@ -524,15 +524,14 @@ section.six-sec:before {
 .connect a img{
     margin-right: 5px;
 }
-.trademarks{
-    padding-top:60px;
-}
 .trademarks p{
     font-size: 14px;
-    line-height: 26px;
+    line-height: 20px;
+    max-width: 850px;
+    margin: 0 auto;
 }
 .trademarks h4{
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -547,7 +546,7 @@ section.six-sec:before {
 }
 @media only screen and (max-width: 1700px) {
     .container{
-        padding: 0 150px;
+        padding: 0 100px;
     }
 }
 @media only screen and (max-width: 1200px) {
@@ -884,9 +883,6 @@ section.six-sec:before {
     .connect a{
         font-size: 20px;
         padding: 5px 28px;
-    }
-    .trademarks {
-        padding-top: 40px;
     }
     .six-sec .common-title h4{
         font-size: 22px;
