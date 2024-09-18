@@ -452,15 +452,57 @@ section.fifth-sec {
 .fifth-sec .service{
     position: relative;
 }
-.fifth-sec .service p{
+.fifth-sec .service .slide-up {
     position: absolute;
-    bottom:44px;
-    left: 26px;
-    font-size: 34px;
-    font-weight: 600;
-    line-height: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.0); /* Initially transparent */
+    transition: background 0.5s ease, transform 0.5s ease; /* Smooth background and transform transitions */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%; /* Full height to control overlay */
+    border-radius: 20px;
 }
-
+.fifth-sec .service:hover .slide-up{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); /* Gradient slides smoothly up */
+    transition: background 0.5s ease; /* Smooth background color transition */
+}
+.fifth-sec .service h4{
+    margin: 0;
+    color: white;
+    position: relative;
+    transition: transform 1s ease, bottom 1s ease;
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+.fifth-sec .service:hover h4 {
+    /* transform: translateY(-20px);
+    bottom:0; */
+}
+.fifth-sec .service p {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    color: white;
+    transition: opacity 1s ease, max-height 1s ease, transform 1s ease;
+    position: relative;
+    transform: translateY(20px); /* Start with p text slightly down */
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 30px;
+}
+.fifth-sec .service:hover p {
+    opacity: 1; /* Make paragraph visible */
+    max-height: 100%; /* Allow it to grow to full size */
+    transform: translateY(0); /* Bring it to normal position */
+}
 /* six-sec */
 .six-sec{
     background-color: #1F6298;
@@ -470,7 +512,7 @@ section.fifth-sec {
 section.six-sec:before {
     background: #68B2CFA1;
     width: 500px;
-    height: 500px;
+    height: 500px;      
     content: '';
     display: block;
     border-radius: 100%;
@@ -614,6 +656,15 @@ section.six-sec:before {
     .second-sec{
         margin-top: 50px !important;
     }
+    .fifth-sec .service h4{
+        font-size: 28px;
+    }
+    .fifth-sec .service p{
+        padding: 0;
+        text-align: left;
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 @media only screen and (max-width: 991px) {
     .common-title h3{
@@ -685,6 +736,12 @@ section.six-sec:before {
     .four-sec .img-content-sec .img-content img{
         height: auto;
     }
+    .fifth-sec .service:hover p {
+        font-size: 16px;
+        text-align: left;
+        line-height: 22px;
+    }
+
 }
 @media (max-width: 767px) {
     .container {
@@ -915,8 +972,11 @@ section.six-sec:before {
        overflow: hidden;
        position: relative;
     }
-    .fifth-sec .container, .third-sec .container{
+    .third-sec .container{
         padding: 0 50px;
+    }
+    .fifth-sec .container{
+        padding: 0 20px;
     }
     .four-sec{
         padding: 72px 30px 90px;
@@ -940,6 +1000,18 @@ section.six-sec:before {
     }
     .second-sec {
         margin-top: 0px !important;
+    }
+    .fifth-sec .service h4{
+        font-size: 22px;
+        padding-bottom: 15px;
+        line-height: 30px;
+    }
+    .fifth-sec .service p{
+        padding: 0;
+    }
+    .fifth-sec .service:hover p {
+        font-size: 15px;
+        line-height: 20px;
     }
 }
 @media only screen and (max-width: 480px) {
