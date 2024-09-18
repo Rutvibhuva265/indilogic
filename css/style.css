@@ -343,7 +343,7 @@ section.dell {
 }
 .four-sec .img-content-sec{
     overflow: hidden;
-    transition: all 1s ease;
+    transition: all 0.7s ease;
     width: 100%;
     display: flex;
     gap:20px;
@@ -357,7 +357,7 @@ section.dell {
     padding: 25px 0;
 }
 .four-sec .img-content-sec .img-content { 
-    transition: width 1s ease;
+    transition: width 0.7s ease;
     width: 60%; 
     overflow: hidden;
 }
@@ -389,7 +389,7 @@ section.dell {
     font-size: 30px;
     line-height: 35px;
     padding: 15px 40px;
-    margin-top: 22px;
+    margin-top: 70px;
     transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; 
 }
 .four-sec .explore:hover {
@@ -545,7 +545,7 @@ section.six-sec:before {
         max-width: 400px;
     }
 }
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1700px) {
     .container{
         padding: 0 150px;
     }
@@ -687,7 +687,6 @@ section.six-sec:before {
         height: auto;
     }
 }
-
 @media (max-width: 767px) {
     .container {
         padding: 0 20px;
