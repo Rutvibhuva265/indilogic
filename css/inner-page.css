@@ -1,0 +1,62 @@
+.inner-banner-sec{
+    padding: 55px 0 0;
+}
+.common-heading{
+    font-size: 40px;
+    line-height: 54px;
+    font-weight: 600;
+    max-width: 1080px;
+    margin:0 auto;
+    text-transform: uppercase;
+}
+.commom-btn{
+    background-color: #FFFDF7;
+    border:1.2px solid #000000;
+    font-size: 32px;
+    line-height: 35px;
+    border-radius: 7px;
+    font-weight: 600;
+    color: #2C2C2C;
+    padding:10px 25px;
+}
+
+
+/* about-sec */
+
+.about-sec, .chooes-sec{
+    padding:90px 0 0;
+}
+
+.about-sec .common-title h3{
+    max-width: 900px;
+}
+.about-sec .about-text h4{
+    font-size: 28px;
+    line-height: 33px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.about-sec .about-text p{
+    max-width: 600px;
+    color: #4D4E53;
+    line-height: 35px;
+}
+
+
+
+/* chooes-sec */
+.chooes-sec .text-part{
+    padding-bottom: 90px;
+}
+.chooes-sec .text-part h4{
+    font-size: 39px;
+    line-height: 39px;
+    font-weight: 700;
+    padding-bottom: 25px;
+}
+.chooes-sec .text-part h3{
+    font-size: 38px;
+    color: #1E1E1E;
+    line-height: 40px;
+    font-weight: 600;
+}

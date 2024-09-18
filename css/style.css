@@ -357,7 +357,7 @@ section.dell {
     padding: 25px 0;
 }
 .four-sec .img-content-sec .img-content { 
-    transition: width 0.7s ease;
+    transition: width 0.5s ease;
     width: 60%; 
     overflow: hidden;
 }
@@ -490,7 +490,7 @@ section.fifth-sec {
     overflow: hidden;
     margin-top: 10px;
     color: white;
-    transition: opacity 1s ease, max-height 1s ease, transform 1s ease;
+    transition: opacity 0.5s ease, max-height 0.5s ease, transform 0.5s ease;
     position: relative;
     transform: translateY(20px); /* Start with p text slightly down */
     margin: 0;
