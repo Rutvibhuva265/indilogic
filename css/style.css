@@ -26,7 +26,9 @@ header{
     background-color: #EEF7FA;
     padding: 28px 0;
 }
-
+.logo{
+    width: 200px;
+}
 header ul li{
     list-style: none;
 }
@@ -49,6 +51,7 @@ header nav.main-menu ul li:last-child {
     font-family: 'Titillium Web';
     font-size: 16px;
     line-height: 14px;
+    border:1px solid #266599;
 }
 .menu-toggle {
     display: none; /* Hidden on desktop */
@@ -62,8 +65,15 @@ header nav.main-menu ul li:last-child {
 header ul li a:hover{
     color: #27669A;
 }
-
-
+header nav.main-menu ul li:last-child:hover {
+    /* Add your hover styles here */
+    background-color: #ffff; /* Example: Change background color on hover */
+    color: #266599;
+    border:1px solid #266599;
+}
+header nav.main-menu ul li:last-child:hover svg path{
+    stroke: #266599;
+}
 
 
 /* footer */
@@ -114,6 +124,13 @@ footer .social-icon a:not(:first-child) {
 .social-icon {
     margin-bottom: 20px;
 }
+
+.main{
+    overflow: hidden;
+    position: relative;
+}
+
+
 /* banner-sec */
 .banner-sec{
     padding-top:32px;
@@ -143,16 +160,13 @@ footer .social-icon a:not(:first-child) {
     font-weight: 600;
     border:1px solid #266599;
 }
-/* .banner-sec a:hover {
+.banner-sec a:hover {
     background: #fff;
     color: #266599;
-} */
-.banner-sec a:hover svg path{
-    fill: #266599;
 }
-/* .banner-sec a:hover svg{
-    fill: #266599;
-} */
+.banner-sec a:hover svg path{
+    stroke: #266599;
+}
 /* second-sec */
 .second-sec{
     position: relative;
@@ -160,6 +174,9 @@ footer .social-icon a:not(:first-child) {
 .second-sec .icon-box a{
     width: 100%;
     height: 100%;
+}
+.second-sec .icon-box a.icon-1:hover svg path{
+    stroke: #266699 !important;
 }
 .second-sec:before {
     content: '';
@@ -219,8 +236,8 @@ footer .social-icon a:not(:first-child) {
     max-width: 210px;
     margin: 0 auto;
 }
-.second-sec .icon-box .icon-content:hover svg path{
-    fill: #266699 !important;
+.second-sec .icon-box .icon .icon-content:hover svg path{
+    fill: #266699;
 }
 .second-sec .icon-box .icon-content:hover p{
     color: #266699;
@@ -273,7 +290,7 @@ footer .social-icon a:not(:first-child) {
     color: #fff;
     font-size: 30px;
     line-height: 35px;
-    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    /* transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; */
 }
 .third-sec .about-content a:hover {
     background: #fff;
@@ -281,7 +298,7 @@ footer .social-icon a:not(:first-child) {
 }
 .third-sec .about-content a:hover svg path {
     fill: #2D6C9D;
-    transition: fill 0.3s ease;
+    /* transition: fill 0.3s ease; */
 }
 .third-sec .about-content p{
     color: #4D4E53;
@@ -343,7 +360,7 @@ section.dell {
 }
 .four-sec .img-content-sec{
     overflow: hidden;
-    transition: all 0.7s ease;
+    transition: all 0.3s ease;
     width: 100%;
     display: flex;
     gap:20px;
@@ -357,7 +374,7 @@ section.dell {
     padding: 25px 0;
 }
 .four-sec .img-content-sec .img-content { 
-    transition: width 0.5s ease;
+    transition: width 0.3s ease;
     width: 60%; 
     overflow: hidden;
 }
@@ -553,7 +570,7 @@ section.six-sec:before {
     padding: 15px 40px;
     border-radius: 9px;
     border: 1.5px solid #1F6298;
-    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    /* transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease; */
 }
 .connect a:hover {
     background: #fff;
@@ -561,7 +578,7 @@ section.six-sec:before {
 }
 .connect a:hover svg path {
     fill: #1F6298;
-    transition: fill 0.3s ease;
+    /* transition: fill 0.3s ease; */
 }
 .connect a img{
     margin-right: 5px;
@@ -579,8 +596,8 @@ section.six-sec:before {
 
 @media only screen and (min-width: 1921px) and (max-width: 2200px) {
     body{
-        font-size: 34px;
-        line-height: 50px;
+        font-size: 30px;
+        line-height: 40px;
     }
     .banner-sec .banner-content {
         max-width: 400px;
@@ -1012,6 +1029,10 @@ section.six-sec:before {
     .fifth-sec .service:hover p {
         font-size: 15px;
         line-height: 20px;
+    }
+    .footer-sec .logo {
+        margin: 0 auto;
+        padding-bottom: 30px;
     }
 }
 @media only screen and (max-width: 480px) {
