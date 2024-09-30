@@ -250,12 +250,19 @@ section.four-sec.about-sussess h4{
 }
 .product-sec .content ul{
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .product-sec .content ul li{
-    list-style: square;
+    list-style: none;
+    color: #3D3D3D;
 }
 .product-sec .content ul li span, .product-sec .content ul li::marker{
     color: #1E81A2;
+    color: #000000;
+    font-weight: 600;
 }
 .product-sec .product-details{
     padding: 100px 0;
@@ -264,9 +271,12 @@ section.four-sec.about-sussess h4{
     background-color: #27669A;
 }
 .product-sec .product-details.bg .content ul li span,.product-sec .product-details.bg .content ul li::marker{
-    color: #87E0FE;
+    color: #FFFFFF;
+    font-weight: 700;
 }
-
+.product-sec .product-details.bg .content ul li{
+    color: #FFFFFF;
+}
 
 
 
@@ -278,7 +288,9 @@ section.four-sec.about-sussess h4{
 .service-sec{
     padding:90px 0 90px 0;
 }
-
+section.inner-banner-sec.service::before{
+    background: none;
+}
 .flip-box {
     display: flex;
     align-items: center;
@@ -467,7 +479,7 @@ section.four-sec.about-sussess h4{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 60px 80px;
+    padding: 40px 60px;
     border-radius: 10px;
     width: 100%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
@@ -500,19 +512,32 @@ section.four-sec.about-sussess h4{
 .popup-content .inner-content {
     background-color:#DDF1F8;
     border-radius: 13px;
-    padding: 50px;
+    padding: 30px;
 }
 .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
+    top: 30px;
+    right: 30px;
+    font-size: 40px;
     cursor: pointer;
 }
-
+.dev-process-sec .development img{
+    width: 60px;
+    height: 60px;
+}
 @media only screen and (min-width: 1921px) and (max-width: 2200px) {
     .chooes-sec .chooes-content p, .core-value .chooes-content p {
         max-width: 100%;
+    }
+}
+@media only screen and (max-width: 1700px) {
+    .popup-content{
+        max-width: 1200px;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .popup-content{
+        max-width: 1000px;
     }
 }
 @media only screen and (max-width: 991px) {
@@ -611,6 +636,29 @@ section.four-sec.about-sussess h4{
         font-size: 32px;
         line-height: 32px;
     }
+    .tools-tech-sec .tech-logo{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 50px;
+        row-gap: 40px;
+    }
+    .tools-tech-sec .tech-logo .logos{
+        width: 100%;
+    }
+    .tools-tech-sec {
+        padding: 60px 0;
+    }
+    .tools-tech-sec .tech-logo .logos p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .work-sec .common-title h3 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .service-sec {
+        padding: 50px 0 50px 0;
+    }
     
 }
 @media only screen and (max-width: 480px) {
@@ -631,5 +679,66 @@ section.four-sec.about-sussess h4{
     .dell-partner {
         padding: 50px 0;
         margin-top: 50px;
+    }
+    .tools-tech-sec .tech-logo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .tools-tech-sec .tech-logo .logos img{
+        width: 80px;
+        height: 80px;
+    }
+    .dev-process-sec .development h4{
+        font-size: 20px;
+        line-height: 28px;
+        padding-top: 10px;
+    }
+    .dev-process-sec .development p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .dev-process-sec .development{
+        padding: 30px;
+    }
+    .popup-content{
+        padding: 20px 20px;
+        max-height: 80vh; /* Limit the popup height to 80% of the viewport */
+        overflow-y: auto; /* Allow vertical scrolling inside the popup */
+        max-width: 350px;
+    }
+    body.popup-open {
+        overflow: hidden;
+    }
+    .popup-overlay {
+        -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
+    }
+    
+    .popup-content {
+        touch-action: pan-y; /* Allow only vertical scrolling in the popup */
+    }
+    .popup-content h4{
+        font-size: 30px;
+        line-height: 36px;
+        padding-bottom: 15px;
+    }
+    .popup-content p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .popup-content .row {
+        padding-top: 20px;
+    }
+    .popup-content .inner-content p {
+        padding-bottom: 10px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .popup-content .inner-content h5 {
+        font-size: 20px;
+        padding-bottom: 15px;
+    }
+    .close-btn{
+        top: 15px;
+        right: 15px;
     }
 }
