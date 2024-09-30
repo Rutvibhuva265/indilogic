@@ -542,7 +542,7 @@ section.six-sec:before {
 .six-sec .industries-list{
     padding-top:70px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 .six-sec .industries-list p{
     font-size: 48px;
@@ -931,7 +931,7 @@ section.six-sec:before {
         padding: 50px 0px 50px;
     }
     .six-sec .industries-list{
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 100%;
         padding-top: 23px;
     }
     .six-sec .industries-list p {
