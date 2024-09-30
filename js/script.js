@@ -36,4 +36,45 @@ $(document).ready(function() {
       $('.img-content').stop().css('width', '60%');
       $('.default-zoom').stop().css('width', '100%');
   });
+
+
+  $(".arrow").click(function() {
+      var parent = $(this).closest(".service-sec .services").find(".flip-box");
+      parent.toggleClass("flipped");
+  });
+
+  // Click on the service-box-flip to flip back to the front
+  $(".service-box-flip").click(function() {
+      var parent = $(this).closest(".service-sec .services").find(".flip-box");
+      parent.toggleClass("flipped"); // Remove the 'flipped' class to flip back
+  });
+
+  
+
+
+
+
+
+
+
+
+
+
+  $(".arrow").click(function() {
+    var popupId = $(this).data("popup"); // Get popup ID from data-popup attribute
+    $("#" + popupId).fadeIn(); // Show popup with the corresponding ID
+});
+
+// Close the popup when the close button is clicked
+$(".close-btn").click(function() {
+    $(this).closest(".popup-overlay").fadeOut(); // Close the popup
+});
+
+// Close popup if clicking outside the content area
+$(".popup-overlay").click(function(event) {
+    if (!$(event.target).closest(".popup-content").length) {
+        $(this).fadeOut(); // Close the popup
+    }
+});
+
 });
