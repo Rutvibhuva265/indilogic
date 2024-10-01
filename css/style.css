@@ -42,6 +42,9 @@ header ul li a{
     font-size: 20px;
     font-weight: 600;
 }
+header ul li a.nav-links.active{
+    color: #266599;
+}
 header nav.main-menu button{
     
 }
@@ -51,7 +54,7 @@ header nav.main-menu ul li:last-child svg{
 header nav.main-menu ul li:last-child a{
     color: #fff;
 }
-header nav.main-menu ul li:last-child {
+header nav.main-menu ul li:last-child a{
     background: #266599;
     color: #fff;
     border-radius: 30px;
@@ -77,13 +80,13 @@ header nav.main-menu ul li:last-child:hover a{
     color: #27669A;
 
 }
-header nav.main-menu ul li:last-child:hover {
+header nav.main-menu ul li:last-child:hover a,header nav.main-menu ul li:last-child a.nav-links.active {
     /* Add your hover styles here */
     background-color: #ffff; /* Example: Change background color on hover */
     color: #266599;
     border:1px solid #266599;
 }
-header nav.main-menu ul li:last-child:hover svg path{
+header nav.main-menu ul li:last-child:hover svg path,header nav.main-menu ul li:last-child a.nav-links.active svg path {
     stroke: #266599;
 }
 

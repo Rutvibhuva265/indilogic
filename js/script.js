@@ -78,3 +78,19 @@ $(".popup-overlay").click(function(event) {
 });
 
 });
+
+// Get the current URL path
+const currentPath = window.location.pathname.split("/").pop();
+
+// Select all nav links
+const navLinks = document.querySelectorAll(".nav-links");
+
+// Loop through each link and add 'active' class to the matching link
+navLinks.forEach(link => {
+  const href = link.getAttribute("href");
+
+  // If the link's href matches the current page path
+  if (href === currentPath) {
+    link.classList.add("active");
+  }
+});
