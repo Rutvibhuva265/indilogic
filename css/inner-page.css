@@ -312,8 +312,27 @@ section.four-sec.about-sussess h4{
 .product-sec .product-details.bg .content ul li{
     color: #FFFFFF;
 }
+.future-image{
+    position: relative;
+}
+.future-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
-
+.future-image h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Adjust text color to ensure visibility */
+    font-size: 70px; /* Adjust as needed */
+    text-align: center;
+    width: 100%; /* Ensures text alignment */
+    line-height: 82px;
+    font-weight: 600;
+}
 
 
 
@@ -812,6 +831,10 @@ section.contact-details:before {
         font-size: 20px;
         line-height: 25px;    
     }
+    .future-image h2{
+        font-size: 40px;
+        line-height: 50px;
+    }
 }
 @media only screen and (max-width: 480px) {
     .dell-partner h3{
@@ -896,5 +919,9 @@ section.contact-details:before {
     section.contact-details a {
         font-size: 16px;
         line-height: 20px;
+    }
+    .future-image h2 {
+        font-size: 24px;
+        line-height: 34px;
     }
 }
