@@ -21,7 +21,12 @@ p{
     margin-bottom: 0;
 }
 /* header */
-
+header.site-header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
 header{
     background-color: #EEF7FA;
     padding: 28px 0;
@@ -42,6 +47,9 @@ header nav.main-menu button{
 }
 header nav.main-menu ul li:last-child svg{
     margin-left: 5px;
+}
+header nav.main-menu ul li:last-child a{
+    color: #fff;
 }
 header nav.main-menu ul li:last-child {
     background: #266599;
@@ -64,6 +72,10 @@ header nav.main-menu ul li:last-child {
 }
 header ul li a:hover{
     color: #27669A;
+}
+header nav.main-menu ul li:last-child:hover a{
+    color: #27669A;
+
 }
 header nav.main-menu ul li:last-child:hover {
     /* Add your hover styles here */
@@ -136,6 +148,7 @@ footer .social-icon a:not(:first-child) {
     padding-top:32px;
     padding-bottom: 72px;
     position: relative;
+    margin-top:150px;
 }
 .banner-sec svg{
     width: 25px;
@@ -716,7 +729,8 @@ section.six-sec:before {
         .main-menu.active ul {
         display: flex !important;
         position: absolute;
-        height: 100%;
+        /* height: 100%; */
+        padding:30px !important;
         background: #EEF7FA;
         left: 0;
         width: 100%;
@@ -1033,6 +1047,9 @@ section.six-sec:before {
     .footer-sec .logo {
         margin: 0 auto;
         padding-bottom: 30px;
+    }
+    .banner-sec{
+        margin-top: 120px;
     }
 }
 @media only screen and (max-width: 480px) {
