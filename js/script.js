@@ -38,7 +38,7 @@ $(document).ready(function() {
   });
 
 
-  $(".arrow").click(function() {
+  $(".service-box").click(function() {
       var parent = $(this).closest(".service-sec .services").find(".flip-box");
       parent.toggleClass("flipped");
   });
@@ -60,7 +60,7 @@ $(document).ready(function() {
 
 
 
-  $(".arrow").click(function() {
+  $(".our-service").click(function() {
     var popupId = $(this).data("popup"); // Get popup ID from data-popup attribute
     $("#" + popupId).fadeIn(); // Show popup with the corresponding ID
 });

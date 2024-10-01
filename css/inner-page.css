@@ -335,6 +335,7 @@ section.inner-banner-sec.service::before{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor: pointer;
 }
 .service-box h5{
     padding-top:10px;
@@ -373,6 +374,7 @@ section.inner-banner-sec.service::before{
     flex-direction: column;
     justify-content: end;
     position: relative;
+    cursor: pointer;
 }
 .our-service-sec .our-service .arrow{
     position: absolute;
@@ -402,6 +404,7 @@ section.dev-process-sec:before {
     right: -100px;
     top: 0;
     filter: blur(200px);
+    z-index: -1;
 }
 /* tools-tech-sec */
 
