@@ -301,6 +301,10 @@ section.four-sec.about-sussess h4{
 .product-sec .product-details.bg{
     background-color: #27669A;
 }
+.product-sec .product-details.bg .image.mouse{
+    background: #fff;
+    border-radius: 20px;
+}
 .product-sec .product-details.bg .content ul li span,.product-sec .product-details.bg .content ul li::marker{
     color: #FFFFFF;
     font-weight: 700;
@@ -750,7 +754,6 @@ section.contact-details:before {
         line-height: 26px;
     }
     .product-sec .content ul li {
-        list-style: square;
         font-size: 16px;
         line-height: 22px;
     }
