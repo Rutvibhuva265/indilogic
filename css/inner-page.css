@@ -663,7 +663,14 @@ section.contact-details:before {
     left: -100px;
     filter: blur(200px);
 }
-
+section.trandmark h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+section.trandmark p{
+    font-size: 20px;
+    line-height: 28px;
+}
 @media only screen and (min-width: 1921px) and (max-width: 2200px) {
     .chooes-sec .chooes-content p, .core-value .chooes-content p {
         max-width: 100%;
