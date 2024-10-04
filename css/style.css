@@ -186,6 +186,7 @@ footer .social-icon a:not(:first-child) {
 /* second-sec */
 .second-sec{
     position: relative;
+    z-index: 9;
 }
 .second-sec .icon-box a{
     width: 100%;
