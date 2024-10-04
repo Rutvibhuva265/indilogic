@@ -139,7 +139,9 @@ footer .social-icon a:not(:first-child) {
 .social-icon {
     margin-bottom: 20px;
 }
-
+.social-icon svg path:hover{
+    fill: #242424;
+}
 .main{
     overflow: hidden;
     position: relative;
@@ -377,7 +379,7 @@ section.dell {
 }
 .four-sec .img-content-sec{
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     width: 100%;
     display: flex;
     gap:20px;
@@ -391,7 +393,7 @@ section.dell {
     padding: 25px 0;
 }
 .four-sec .img-content-sec .img-content { 
-    transition: width 0.3s ease;
+    transition: width 0.5s ease;
     width: 60%; 
     overflow: hidden;
 }
