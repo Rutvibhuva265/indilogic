@@ -26,6 +26,8 @@ header.site-header{
     width: 100%;
     top: 0;
     z-index: 999;
+    display: flex;
+    align-items: center;
 }
 header{
     background-color: #EEF7FA;
@@ -90,7 +92,14 @@ header nav.main-menu ul li:last-child:hover svg path,header nav.main-menu ul li:
     stroke: #266599;
 }
 
-
+header.shrink {
+    height: 70px;
+    padding: 10px 0;
+}
+header.shrink .logo img{
+    height: 50px;
+    object-fit: contain;
+}
 /* footer */
 .f-menu ul li{
     list-style: none;
@@ -189,6 +198,7 @@ footer .social-icon a:not(:first-child) {
 .second-sec{
     position: relative;
     z-index: 9;
+    padding:70px 0;
 }
 .second-sec .icon-box a{
     width: 100%;
@@ -351,9 +361,9 @@ section.dell {
     padding:90px 0;
 }
 .dell .dell-text h1{
-    font-size: 55px;
+    font-size: 48px;
     font-weight: 600;
-    line-height: 66px;
+    line-height: 58px;
     padding-bottom: 20px;
 }
 .dell .dell-text p{
@@ -564,10 +574,12 @@ section.six-sec:before {
     grid-template-columns: 1fr 1fr;
 }
 .six-sec .industries-list p{
-    font-size: 48px;
-    line-height: 54px;
+    font-size: 42px;
+    line-height: 50px;
     font-weight: 600;
     padding-bottom: 60px;
+    display: flex;
+    align-items: center;
 }
 .connect{
     background-color: #DDF1F8;
@@ -625,6 +637,9 @@ section.six-sec:before {
 @media only screen and (max-width: 1700px) {
     .container{
         padding: 0 100px;
+    }
+    .second-sec{
+        padding:100px 0;
     }
 }
 @media only screen and (max-width: 1200px) {
