@@ -159,10 +159,15 @@ footer .social-icon a:not(:first-child) {
 
 /* banner-sec */
 .banner-sec{
-    padding-top:32px;
+    /* padding-top:32px; */
     padding-bottom: 72px;
     position: relative;
     margin-top:150px;
+}
+.banner-sec .banner-img img{
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 .banner-sec svg{
     width: 25px;
@@ -172,7 +177,7 @@ footer .social-icon a:not(:first-child) {
 .banner-sec .banner-title h1 {
     font-size: 40px;
     font-weight: 600;
-    line-height: 54px;
+    line-height: 45px;
     max-width: 200px;
 }
 .banner-sec .banner-content{
@@ -198,7 +203,7 @@ footer .social-icon a:not(:first-child) {
 .second-sec{
     position: relative;
     z-index: 9;
-    padding:70px 0;
+    padding:40px 0 70px;
 }
 .second-sec .icon-box a{
     width: 100%;
@@ -358,23 +363,26 @@ footer .social-icon a:not(:first-child) {
 
 section.dell {
     background: #007DB8;
-    padding:90px 0;
+    padding:50px 0;
+}
+section.dell img {
+    width: 200px;
 }
 .dell .dell-text h1{
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 600;
-    line-height: 58px;
+    line-height: 50px;
     padding-bottom: 20px;
 }
 .dell .dell-text p{
-    font-size: 26px;
-    line-height: 33px;
+    font-size: 22px;
+    line-height: 28px;
     font-weight: 400;
 }
 .dell .middle-boder{
     background: #7CCAEF;
     width: 6px;
-    height: 300px;
+    height: 200px;
     display: block;
     margin: 0 auto;
 }
@@ -569,13 +577,13 @@ section.six-sec:before {
     left: -100px;
 }
 .six-sec .industries-list{
-    padding-top:70px;
+    padding-top:40px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 .six-sec .industries-list p{
-    font-size: 42px;
-    line-height: 50px;
+    font-size: 30px;
+    line-height: 40px;
     font-weight: 600;
     padding-bottom: 60px;
     display: flex;
@@ -585,7 +593,7 @@ section.six-sec:before {
     background-color: #DDF1F8;
     padding:70px 0;
     border-radius: 22px;
-    margin-top:50px
+    /* margin-top:50px */
 }
 .connect h2{
     font-size: 46px;
