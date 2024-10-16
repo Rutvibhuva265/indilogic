@@ -58,7 +58,7 @@ header nav.main-menu button{
 header nav.main-menu ul li:last-child svg{
     margin-left: 5px;
 }
-header nav.main-menu ul li:last-child a{
+/* header nav.main-menu ul li:last-child a{
     color: #fff;
 }
 header nav.main-menu ul li:last-child a{
@@ -70,7 +70,7 @@ header nav.main-menu ul li:last-child a{
     font-size: 16px;
     line-height: 14px;
     border:1px solid #266599;
-}
+} */
 .menu-toggle {
     display: none; /* Hidden on desktop */
     background: none;
@@ -83,16 +83,15 @@ header nav.main-menu ul li:last-child a{
 header ul li a:hover{
     color: #27669A;
 }
-header nav.main-menu ul li:last-child:hover a{
+/* header nav.main-menu ul li:last-child:hover a{
     color: #27669A;
 
 }
 header nav.main-menu ul li:last-child:hover a,header nav.main-menu ul li:last-child a.nav-links.active {
-    /* Add your hover styles here */
-    background-color: #ffff; /* Example: Change background color on hover */
+    background-color: #ffff; 
     color: #266599;
     border:1px solid #266599;
-}
+} */
 header nav.main-menu ul li:last-child:hover svg path,header nav.main-menu ul li:last-child a.nav-links.active svg path {
     stroke: #266599;
 }
@@ -168,7 +167,7 @@ footer .social-icon a:not(:first-child) {
     /* padding-top:32px; */
     padding-bottom: 72px;
     position: relative;
-    margin-top:150px;
+    margin-top:115px;
 }
 .banner-sec .banner-img img{
     height: 350px;
@@ -209,7 +208,7 @@ footer .social-icon a:not(:first-child) {
 .second-sec{
     position: relative;
     z-index: 9;
-    padding:40px 0 70px;
+    padding:20px 0 70px;
 }
 .second-sec .icon-box a{
     width: 100%;
@@ -374,7 +373,7 @@ section.dell {
     padding:50px 0;
 }
 section.dell img {
-    width: 200px;
+    width: 150px;
     margin: 0 0 0 auto;
     display: flex;
 }
@@ -432,10 +431,10 @@ section.dell img {
     width: 100%;
     height: 420px;
     object-fit: cover; 
+    transition: transform 0.5s ease;
 }
-
 .four-sec .img-content-sec .img-content img:hover {
-    /* transform: scale(1.1);  */
+    transform: scale(1.1); 
 }
 
 .default-zoom {

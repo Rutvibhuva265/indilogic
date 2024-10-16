@@ -1,10 +1,10 @@
 .inner-banner-sec{
     padding: 10px 0 0;
-    margin-top: 150px;
+    margin-top: 115px;
 }
 .common-heading{
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 30px;
+    line-height: 38px;
     font-weight: 600;
     max-width: 1080px;
     margin:0 auto;
@@ -244,23 +244,26 @@ section.four-sec.about-sussess h4{
 
 .dell-partner{
     background-color: #27669A;
-    padding: 90px 0;
-    margin-top:90px;
+    padding: 50px 0;
+    margin-top:50px;
 }
 .dell-partner h3{
-    font-size: 39px;
-    line-height: 39px;
+    font-size: 30px;
+    line-height: 34px;
     font-weight: 700;
     text-transform: uppercase;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
 }
 .dell-partner h4{
-    font-size: 36px;
-    line-height: 36px;
-    padding-bottom: 25px;
+    font-size: 26px;
+    line-height: 31px;
+    padding-bottom: 15px;
     font-weight: 600;
 }
-
+.dell-partner p{
+    font-size: 20px;
+    line-height: 25px;
+}
 
 /* product-sec */
 .product-sec{
@@ -426,7 +429,7 @@ section.inner-banner-sec.service::before{
     padding: 70px 20px 30px;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    /* justify-content: end; */
     position: relative;
     cursor: pointer;
 }
@@ -616,7 +619,7 @@ section.tools-tech-sec:before {
 /* contact */
 
 section.inner-banner-sec.contact{
-    padding: 70px 0;
+    padding: 0px 0 50px;
 }
 .location{
     background-color: #266599;
