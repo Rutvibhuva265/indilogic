@@ -32,9 +32,14 @@ header.site-header{
 header{
     background-color: #EEF7FA;
     padding: 28px 0;
+    height: 100px; /* Initial height of the header */
+     transition: height 0.5s ease;
 }
 .logo{
     width: 200px;
+    height: 60px;
+    transition: height 0.5s ease;
+    object-fit: contain;
 }
 header ul li{
     list-style: none;
@@ -99,6 +104,7 @@ header.shrink {
 header.shrink .logo img{
     height: 50px;
     object-fit: contain;
+    transition: all 0.3s ease;
 }
 /* footer */
 .f-menu ul li{
@@ -269,6 +275,8 @@ footer .social-icon a:not(:first-child) {
     font-weight: 400;
     max-width: 210px;
     margin: 0 auto;
+    font-size: 19px;
+    line-height: 25px;
 }
 .second-sec .icon-box .icon .icon-content:hover svg path{
     fill: #266699;
@@ -367,6 +375,8 @@ section.dell {
 }
 section.dell img {
     width: 200px;
+    margin: 0 0 0 auto;
+    display: flex;
 }
 .dell .dell-text h1{
     font-size: 44px;
@@ -729,6 +739,9 @@ section.six-sec:before {
     .common-title h3{
         font-size: 30px;
         line-height: 40px;
+    }
+    section.dell img{
+        width: 100%;
     }
     .third-sec .about-content p{
         margin-bottom: 25px;
