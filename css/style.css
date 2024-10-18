@@ -188,7 +188,7 @@ footer .social-icon a:not(:first-child) {
 .banner-sec .banner-content{
     max-width: 350px;
 }
-.banner-sec a{
+/* .banner-sec a{
     background: #266599;
     color: #FFFFFF;
     padding: 23px 60px;
@@ -196,14 +196,14 @@ footer .social-icon a:not(:first-child) {
     font-size: 20px;
     font-weight: 600;
     border:1px solid #266599;
-}
-.banner-sec a:hover {
+} */
+/* .banner-sec a:hover {
     background: #fff;
     color: #266599;
-}
-.banner-sec a:hover svg path{
+} */
+/* .banner-sec a:hover svg path{
     stroke: #266599;
-}
+} */
 /* second-sec */
 .second-sec{
     position: relative;
@@ -242,7 +242,7 @@ footer .social-icon a:not(:first-child) {
     z-index: 9999;
     background-color: #68B2CF;
     border-radius: 100%;
-    opacity: 0.63.banner-sec a;
+    opacity: 0.63;
     filter: blur(300px);
     position: absolute;
     left: 0;
@@ -506,11 +506,12 @@ section.fifth-sec {
     overflow: hidden;
 }
 .fifth-sec{
-    padding: 85px 0px 106px;
+    padding: 50px 0px;
 }
 .fifth-sec .service-sec{
-    padding-top:100px;
-    row-gap:80px;
+    /* padding-top:100px; */
+    row-gap:40px;
+    padding:0
 }
 .fifth-sec .service{
     position: relative;
@@ -690,7 +691,7 @@ section.six-sec:before {
         padding-top: 50px;
     }
     .fifth-sec .service-sec {
-        padding-top: 60px;
+        /* padding-top: 60px; */
         row-gap: 30px;
     }
     .dell .dell-text h1{
@@ -848,10 +849,10 @@ section.six-sec:before {
         font-weight: 600;
         max-width: 250px;
     }
-    .banner-sec a{
+    /* .banner-sec a{
         padding: 15px 23px;
         font-size: 17px;
-    }
+    } */
     .banner-sec svg {
         width: 22px;
         height: 22px;
@@ -980,7 +981,7 @@ section.six-sec:before {
         bottom: 10px;
     }
     .fifth-sec .service-sec{
-        padding-top:50px;
+        padding-top:30px;
     }
     .fifth-sec{
         padding: 50px 0px 50px;

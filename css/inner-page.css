@@ -267,7 +267,7 @@ section.four-sec.about-sussess h4{
 
 /* product-sec */
 .product-sec{
-    padding: 80px 0 0 0;
+    padding: 40px 0 0 0;
 }
 .product-sec h2{
     font-size: 44px;
@@ -299,7 +299,7 @@ section.four-sec.about-sussess h4{
     font-weight: 600;
 }
 .product-sec .product-details{
-    padding: 100px 0;
+    padding: 40px 0;
 }
 .product-sec .product-details.bg{
     background-color: #27669A;
@@ -421,7 +421,7 @@ section.inner-banner-sec.service::before{
 
 .our-service-sec{
     background-color: #266599;
-    padding:90px 0 140px 0;
+    padding:50px 0 50px 0;
 }
 .our-service-sec .our-service{
     background-color: #FFFFFFFC;
@@ -466,7 +466,7 @@ section.dev-process-sec:before {
 /* tools-tech-sec */
 
 .tools-tech-sec{
-    padding:110px 0;
+    padding:50px 0;
     position: relative;
 }
 .tools-tech-sec .common-title h3{
@@ -479,7 +479,7 @@ section.dev-process-sec:before {
     justify-content: center;
     align-items: center;
     row-gap: 80px;
-    padding-top: 100px;
+    padding-top: 50px;
 }
 .tools-tech-sec .tech-logo .logos{
     /* width: 20%; */
@@ -506,7 +506,7 @@ section.dev-process-sec:before {
 /* dev-process-sec */
 
 .dev-process-sec{
-    padding:90px 0;
+    padding:40px 0;
     position: relative;
 }
 .dev-process-sec h3{
@@ -623,7 +623,7 @@ section.inner-banner-sec.contact{
 }
 .location{
     background-color: #266599;
-    padding:70px 0;
+    padding:50px 0;
 }
 section.location .map h5 {
     font-size: 28px;
@@ -634,7 +634,7 @@ section.location .map iframe{
     border-radius: 20px;
 }
 .contact-details{
-    padding: 70px 0;
+    padding: 50px 0;
     position: relative;
 }
 section.contact-details a {
@@ -786,33 +786,33 @@ section.trandmark p{
     .product-sec .content ul li {
         font-size: 16px;
         line-height: 22px;
-    }
+    } 
     .product-sec .content h4 {
         font-size: 22px;
         line-height: 22px;
         padding-bottom: 15px;
     }
     .product-sec .product-details{
-        padding: 50px 0;
+        padding: 30px 0;
     }
     .product-sec {
-        padding: 50px 0 0 0;
+        padding: 30px 0 0 0;
     }
-    .product-sec h2 {
+    .product-sec h2 {    
         font-size: 32px;
         line-height: 32px;
     }
     .tools-tech-sec .tech-logo{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        padding-top: 50px;
+        padding-top: 30px;
         row-gap: 40px;
     }
     .tools-tech-sec .tech-logo .logos{
         width: 100%;
     }
     .tools-tech-sec {
-        padding: 60px 0;
+        padding: 30px 0;
     }
     .tools-tech-sec .tech-logo .logos p {
         font-size: 18px;

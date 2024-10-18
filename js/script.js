@@ -96,15 +96,15 @@ navLinks.forEach(link => {
 });
 
 
-document.querySelectorAll('a[href^="service.html/#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').split('#')[1];
-      document.getElementById(targetId).scrollIntoView({
-          behavior: 'smooth'
-      });
-  });
-});
+// document.querySelectorAll('a[href^="service.html/#"]').forEach(anchor => {
+//   anchor.addEventListener('click', function(e) {
+//       e.preventDefault();
+//       const targetId = this.getAttribute('href').split('#')[1];
+//       document.getElementById(targetId).scrollIntoView({
+//           behavior: 'smooth'
+//       });
+//   });
+// });
 
 
 $(window).scroll(function() {
@@ -122,3 +122,16 @@ window.onscroll = function() {
     header.classList.remove("shrink");
   }
 };
+
+
+// Smooth scroll with offset for reduced header height
+$('a[href^="#"]').on('click', function(e) {
+  e.preventDefault(); // Prevent default anchor behavior
+
+  var target = $(this.hash); // Get the target section
+  var headerHeight = $('#mainHeader').outerHeight(); // Get current header height
+
+  $('html, body').animate({
+    scrollTop: target.offset().top - headerHeight // Scroll to section, offset by header height
+  }, 600); // Animation duration
+});
