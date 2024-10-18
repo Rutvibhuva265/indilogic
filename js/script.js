@@ -124,43 +124,14 @@ window.onscroll = function() {
 };
 
 
-// // Smooth scroll with offset for reduced header height
-// $('a[href^="#"]').on('click', function(e) {
-//   e.preventDefault(); // Prevent default anchor behavior
+// Smooth scroll with offset for reduced header height
+$('a[href^="#"]').on('click', function(e) {
+  e.preventDefault(); // Prevent default anchor behavior
 
-//   var target = $(this.hash); // Get the target section
-//   var headerHeight = $('#mainHeader').outerHeight(); // Get current header height
+  var target = $(this.hash); // Get the target section
+  var headerHeight = $('#mainHeader').outerHeight(); // Get current header height
 
-//   // $('html, body').animate({
-//   //   scrollTop: target.offset().top - headerHeight // Scroll to section, offset by header height
-//   // }, 600); // Animation duration
-// });
-
-
-$(window).on('scroll', function() {
-  var scrollPosition = $(window).scrollTop(); // Get the current scroll position
-  var headerHeight = $('#mainHeader').outerHeight(); // Get the current header height (whether 100px or 60px)
-
-  // Loop through each section and check if it's in view
-  $('.service').each(function() {
-    var sectionOffset = $(this).offset().top; // Get the section offset from the top of the page
-
-    if (scrollPosition >= sectionOffset - headerHeight && 
-        scrollPosition < sectionOffset + $(this).outerHeight() - headerHeight) {
-      // Add the border color to the section when it's in view
-      $(this).addClass('active-border');
-    } else {
-      // Remove the border color if it's not in view
-      $(this).removeClass('active-border');
-    }
-  });
-});
-
-// Handle shrinking of the header on scroll
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 50) { // Adjust the value as needed
-    $('#mainHeader').addClass('shrink');
-  } else {
-    $('#mainHeader').removeClass('shrink');
-  }
+  $('html, body').animate({
+    scrollTop: target.offset().top - headerHeight // Scroll to section, offset by header height
+  }, 600); // Animation duration
 });
