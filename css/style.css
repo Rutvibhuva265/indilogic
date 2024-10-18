@@ -513,9 +513,8 @@ section.fifth-sec {
     row-gap:40px;
     padding:0
 }
-.fifth-sec .service.active-border{
-    border:2px solid #236397;
-    border-radius: 24px;
+.fifth-sec .service-sec.active-border{
+   margin-top:20px;
 }
 .fifth-sec .service{
     position: relative;

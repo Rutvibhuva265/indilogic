@@ -124,14 +124,37 @@ window.onscroll = function() {
 };
 
 
-// Smooth scroll with offset for reduced header height
 $('a[href^="#"]').on('click', function(e) {
   e.preventDefault(); // Prevent default anchor behavior
 
   var target = $(this.hash); // Get the target section
-  var headerHeight = $('#mainHeader').outerHeight(); // Get current header height
+  if (target.length) { // Ensure target exists
+    var headerHeight = $('#mainHeader').outerHeight(); // Get current header height
+    var offset = headerHeight; // Use the full header height for offset
 
-  $('html, body').animate({
-    scrollTop: target.offset().top - headerHeight // Scroll to section, offset by header height
-  }, 600); // Animation duration
+    // Animate scroll
+    $('html, body').animate({
+      scrollTop: target.offset().top - offset // Scroll to section, offset by header height
+    }, 600); // Animation duration
+  }
+});
+
+
+$(window).on('scroll', function() {
+  var scrollPosition = $(window).scrollTop(); // Get the current scroll position
+  var headerHeight = $('#mainHeader').outerHeight(); // Get the current header height (whether 100px or 60px)
+
+  // Loop through each section and check if it's in view
+  $('.fifth-sec .service-sec').each(function() {
+    var sectionOffset = $(this).offset().top; // Get the section offset from the top of the page
+
+    if (scrollPosition >= sectionOffset - headerHeight && 
+        scrollPosition < sectionOffset + $(this).outerHeight() - headerHeight) {
+      // Add the border color to the section when it's in view
+      $(this).addClass('active-border');
+    } else {
+      // Remove the border color if it's not in view
+      $(this).removeClass('active-border');
+    }
+  });
 });
