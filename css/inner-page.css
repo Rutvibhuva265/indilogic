@@ -47,6 +47,11 @@ section.inner-banner-sec:before {
     padding:50px 0 50px;
     position: relative;
 }
+.about-sec img{
+    height: 500px;
+    object-fit: cover;
+    border-radius: 24px;
+} 
 section.about-sec:before {
     display: block;
     content: '';
@@ -296,7 +301,7 @@ section.four-sec.about-sussess h4{
 .product-sec .content ul li span, .product-sec .content ul li::marker{
     color: #1E81A2;
     color: #000000;
-    font-weight: 600;
+    font-weight: 700;
 }
 .product-sec .product-details{
     padding: 40px 0;
@@ -713,6 +718,9 @@ section.trandmark p{
 @media (max-width: 767px) {
     .inner-banner-sec{
         margin-top: 110px;
+    }
+    .about-sec img{
+        height: auto;
     }
     .common-heading{
         font-size: 20px;
