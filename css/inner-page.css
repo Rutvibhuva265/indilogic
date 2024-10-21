@@ -79,6 +79,9 @@ section.about-sec:before {
     /* max-width: 600px; */
     color: #4D4E53;
     line-height: 35px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-bottom: 15px;
 }
 section.intro {
     background: #266599;
@@ -88,10 +91,12 @@ section.intro .about-text h4{
     font-size: 33px;
     font-weight: 600;
     line-height: 40px;
-    padding-bottom: 35px;
+    padding-bottom: 20px;
 }
 section.intro .about-text p{
     padding-bottom: 15px;
+    font-size: 20px;
+    line-height: 30px;
 }
 
 /* chooes-sec */
