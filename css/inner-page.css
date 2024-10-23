@@ -20,6 +20,23 @@
     color: #2C2C2C;
     padding:10px 25px;
 }
+.commom-btn.bg{
+    background: #266599;
+    border: 1px solid #266599;
+    color: #fff; 
+}
+.commom-btn.bg svg path{
+    fill: #fff;
+}
+.commom-btn.bg:hover{
+    background-color: #FFFDF7;
+    border:1.2px solid #000000;
+    color: #2C2C2C;
+}
+.commom-btn.bg:hover svg path{
+    fill: #2C2C2C;
+
+}
 .commom-btn:hover {
     background: #266599;
     border: 1px solid #266599;
@@ -31,14 +48,15 @@
 section.inner-banner-sec:before {
     content: '';
     display: block;
-    width: 600px;
-    height: 600px;
+    width: 500px;
+    height: 500px;
     background: #68B2CF66;
     border-radius: 100%;
-    filter: blur(250px);
+    filter: blur(150px);
     position: absolute;
     right: 0;
     z-index: -1;
+    bottom: 0
 }
 
 /* about-sec */
