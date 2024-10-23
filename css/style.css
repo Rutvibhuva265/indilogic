@@ -952,14 +952,14 @@ section.six-sec:before {
         line-height: 20px;
     }
     .dell img{
-        width: 100%;
+        width: 100px !important;
     }
     section.dell{
         padding: 50px 0;
     }
     .dell .middle-boder{
         width: 2px;
-        height: 250px;
+        height: 100px;
     }
     .four-sec .img-content-sec{
         text-align: center;
@@ -1097,12 +1097,15 @@ section.six-sec:before {
         margin-top: 120px;
     }
 }
-@media only screen and (max-width: 480px) {
+@media  (max-width: 480px) {
     .second-sec .icon-box .icon-content {
         padding: 5px;
     }
     .banner-sec .banner-content p{
         font-size: 18px;
         line-height: 25px;
+    }
+    .dell img {
+        width: 100% !important;
     }
 }
