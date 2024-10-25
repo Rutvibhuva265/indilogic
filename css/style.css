@@ -573,7 +573,7 @@ section.fifth-sec {
 }
 
 div.active-border#Development1 img, div.active-border#Development2 img, div.active-border#Development3 img, div.active-border#Development4 img{
-    border: 2px solid #266599;
+    border: 4px solid #7CCAEF;
     border-radius: 28px;
 }
 .fifth-sec .service img {
