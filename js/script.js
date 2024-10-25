@@ -124,37 +124,62 @@ window.onscroll = function() {
 };
 
 
-$('a[href^="#"]').on('click', function(e) {
-  e.preventDefault(); // Prevent default anchor behavior
+// $('a[href^="#"]').on('click', function(e) {
+//   e.preventDefault(); // Prevent default anchor behavior
 
-  var target = $(this.hash); // Get the target section
-  if (target.length) { // Ensure target exists
-    var headerHeight = $('#mainHeader').outerHeight(); // Get current header height
-    var offset = headerHeight; // Use the full header height for offset
+//   var target = $(this.hash); // Get the target section
+//   if (target.length) { // Ensure target exists
+//     var headerHeight = $('#mainHeader').outerHeight(); // Get current header height
+//     var offset = headerHeight; // Use the full header height for offset
 
-    // Animate scroll
-    $('html, body').animate({
-      scrollTop: target.offset().top - offset // Scroll to section, offset by header height
-    }, 600); // Animation duration
-  }
-});
+//     // Animate scroll
+//     $('html, body').animate({
+//       scrollTop: target.offset().top - offset // Scroll to section, offset by header height
+//     }, 600); // Animation duration
+//   }
+// });
 
 
 $(window).on('scroll', function() {
   var scrollPosition = $(window).scrollTop(); // Get the current scroll position
-  var headerHeight = $('#mainHeader').outerHeight(); // Get the current header height (whether 100px or 60px)
+  var headerHeight = $('#mainHeader').outerHeight(); // Adjust based on the header's height
 
-  // Loop through each section and check if it's in view
+  // Loop through each .service section within .fifth-sec .service-sec
   $('.fifth-sec .service-sec').each(function() {
-    var sectionOffset = $(this).offset().top; // Get the section offset from the top of the page
+    var $service = $(this);
+    var serviceOffset = $service.offset().top; // Get the offset of each service section from the top of the page
 
-    if (scrollPosition >= sectionOffset - headerHeight && 
-        scrollPosition < sectionOffset + $(this).outerHeight() - headerHeight) {
-      // Add the border color to the section when it's in view
-      $(this).addClass('active-border');
+    // Check if the service section is in the viewport, adjusted by the header height
+    if (scrollPosition >= serviceOffset - headerHeight && 
+        scrollPosition < serviceOffset + $service.outerHeight() - headerHeight) {
+      // Add the active-border class if the section is in view
+      $service.addClass('top');
     } else {
-      // Remove the border color if it's not in view
-      $(this).removeClass('active-border');
+      // Remove the active-border class if the section is not in view
+      $service.removeClass('top');
     }
   });
+});
+
+
+
+$(document).on('click', 'a[href^="#"]', function(event) {
+  event.preventDefault(); // Prevent default anchor behavior
+
+  // Get the target ID from the href attribute
+  var targetID = $(this).attr('href').substring(1);
+  var $targetElement = $('#' + targetID); // Select the target element by ID
+
+  if ($targetElement.length) {
+    // Remove 'active-border' from all '.servicee' divs
+    $('.fifth-sec .service-sec .service').removeClass('active-border');
+
+    // Add 'active-border' to the target element
+    $targetElement.addClass('active-border');
+
+    // Scroll smoothly to the target element
+    $('html, body').animate({
+      scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
+    }, 100);
+  }
 });
