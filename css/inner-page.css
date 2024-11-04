@@ -469,6 +469,9 @@ section.inner-banner-sec.service::before{
 .our-service-sec .our-service:hover{
     background-color: #DDF1F8;
 }
+.our-service-sec .active-bg .our-service{
+    background-color: #DDF1F8;
+}
 .our-service-sec .our-service h4{
     font-size: 28px;
     font-weight: 700;
