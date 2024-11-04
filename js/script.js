@@ -159,106 +159,25 @@ $(window).on('scroll', function() {
       $service.removeClass('top');
     }
   });
-});
 
+  $(document).on('click', 'a[href^="#"]', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
 
-
-// $(document).on('click', 'a[href^="#"]', function(event) {
-//   event.preventDefault(); // Prevent default anchor behavior
-
-//   // Get the target ID from the href attribute
-//   var targetID = $(this).attr('href').substring(1);
-//   var $targetElement = $('#' + targetID); // Select the target element by ID
-
-//   if ($targetElement.length) {
-//     // Remove 'active-border' from all '.servicee' divs
-//     $('.fifth-sec .service-sec .service').removeClass('active-border');
-
-//     // Add 'active-border' to the target element
-//     $targetElement.addClass('active-border');
-
-//     // Scroll smoothly to the target element
-//     $('html, body').animate({
-//       scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-//     }, 100);
-//   }
-// });
-
-
-
-
-$(document).ready(function() {
-  // Click event for .fifth-sec .service-sec
-  $(document).on('click', '.icon-box a[href^="#"]', function(event) {
-    event.preventDefault();
-
+    // Get the target ID from the href attribute
     var targetID = $(this).attr('href').substring(1);
-    var $targetElement = $('#' + targetID);
+    var $targetElement = $('#' + targetID); // Select the target element by ID
 
     if ($targetElement.length) {
+      // Remove 'active-border' from all '.servicee' divs
       $('.fifth-sec .service-sec .service').removeClass('active-border');
+
+      // Add 'active-border' to the target element
       $targetElement.addClass('active-border');
+
+      // Scroll smoothly to the target element
       $('html, body').animate({
         scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
       }, 100);
     }
   });
-
-  // Click event for .our-service-sec a[href^="#"]
-  // $(document).on('click', '.home-page .fifth-sec .service-sec a[href^="#"]', function(event) {
-  //   event.preventDefault();
-  
-  //   var targetID = $(this).attr('href').substring(1); // Get the target ID from href
-  //   var $targetElement = $('#' + targetID); // Find the target element
-  
-  //   // Ensure targetID matches with a .our-service element
-  //   if ($targetElement.length && $targetElement.hasClass('our-service')) {
-  //     // Remove active class from all '.our-service' divs
-  //     $('.service-page .our-service-sec .our-service').removeClass('active-bg');
-      
-  //     // Add active class to the target element
-  //     $targetElement.addClass('active-bg');
-      
-  //     // Scroll to target element
-  //     $('html, body').animate({
-  //       scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-  //     }, 100);
-  //   }
-  // });
-
 });
-
-$(document).ready(function() {
-  // Click event for service links on the home page
-  $(document).on('click', '.fifth-sec .service-sec a[href^="#"]', function(event) {
-    event.preventDefault();
-
-    var targetID = $(this).attr('href').substring(1); // Get the target ID from href
-    // Redirect to the service page with the targetID hash
-    window.location.href = 'service.html#' + targetID;
-  });
-});
-
-$(document).ready(function() {
-  // Check for the hash on the service page
-  if (window.location.hash) {
-    var targetID = window.location.hash.substring(1); // Get the ID without '#'
-    var $targetElement = $('#' + targetID); // Find the target element
-
-    // Ensure the targetID matches with a .our-service element
-    if ($targetElement.length) {
-      // Optional: Add active class to the target element
-      $targetElement.addClass('active-bg');
-
-      // Scroll to the target element, adjusting for header height
-      $('html, body').animate({
-        scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-      }, 300);
-    } else {
-      console.log("Target element not found.");
-    }
-  } else {
-    console.log("No hash found in the URL.");
-  }
-});
-
