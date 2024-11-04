@@ -114,14 +114,14 @@ $(window).scroll(function() {
     $('header').removeClass('shrink');
   }
 });
-// window.onscroll = function() {
-//   var header = document.getElementById("mainHeader");
-//   if (window.pageYOffset > 50) {  // Adjust the value as needed
-//     header.classList.add("shrink");
-//   } else {
-//     header.classList.remove("shrink");
-//   }
-// };
+window.onscroll = function() {
+  var header = document.getElementById("mainHeader");
+  if (window.pageYOffset > 50) {  // Adjust the value as needed
+    header.classList.add("shrink");
+  } else {
+    header.classList.remove("shrink");
+  }
+};
 
 
 // $('a[href^="#"]').on('click', function(e) {
@@ -163,43 +163,6 @@ $(window).on('scroll', function() {
 
 
 
-$(document).on('click', 'a[href^="#"]', function(event) {
-  event.preventDefault(); // Prevent default anchor behavior
-
-  // Get the target ID from the href attribute
-  var targetID = $(this).attr('href').substring(1);
-  var $targetElement = $('#' + targetID); // Select the target element by ID
-
-  if ($targetElement.length) {
-    // Remove 'active-border' from all '.servicee' divs
-    $('.fifth-sec .service-sec .service').removeClass('active-border');
-
-    // Add 'active-border' to the target element
-    $targetElement.addClass('active-border');
-
-    // Scroll smoothly to the target element
-    $('html, body').animate({
-      scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-    }, 100);
-  }
-
-  if ($targetElement.length) {
-    // Remove 'active-border' from all '.servicee' divs
-    $('.our-service-sec .our-service').removeClass('active-border');
-
-    // Add 'active-border' to the target element
-    $targetElement.addClass('active-border');
-
-    // Scroll smoothly to the target element
-    $('html, body').animate({
-      scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-    }, 100);
-  }
-});
-
-
-
-
 // $(document).on('click', 'a[href^="#"]', function(event) {
 //   event.preventDefault(); // Prevent default anchor behavior
 
@@ -209,10 +172,10 @@ $(document).on('click', 'a[href^="#"]', function(event) {
 
 //   if ($targetElement.length) {
 //     // Remove 'active-border' from all '.servicee' divs
-//     $('.our-service-sec .our-service').removeClass('active-bg');
+//     $('.fifth-sec .service-sec .service').removeClass('active-border');
 
 //     // Add 'active-border' to the target element
-//     $targetElement.addClass('active-bg');
+//     $targetElement.addClass('active-border');
 
 //     // Scroll smoothly to the target element
 //     $('html, body').animate({
@@ -220,3 +183,86 @@ $(document).on('click', 'a[href^="#"]', function(event) {
 //     }, 100);
 //   }
 // });
+
+
+
+
+$(document).ready(function() {
+  // Function to add 'active-border' and 'active-bg' based on URL hash for .service-sec section
+  function addActiveClassesFromHashServiceSec() {
+    var hash = window.location.hash.substring(1);
+
+    if (hash) {
+      var $targetElement = $('#' + hash);
+      if ($targetElement.length && $targetElement.closest('.fifth-sec').length) {
+        // Remove classes from all '.service' divs in .fifth-sec
+        $('.fifth-sec .service-sec .service').removeClass('active-border');
+
+        // Add classes to the target element
+        $targetElement.addClass('active-border');
+
+        // Scroll to target element
+        $('html, body').animate({
+          scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
+        }, 100);
+      }
+    }
+  }
+
+  // Function to add 'active-border' and 'active-bg' based on URL hash for .our-service-sec section
+  function addActiveClassesFromHashOurServiceSec() {
+    var hash = window.location.hash.substring(1);
+
+    if (hash) {
+      var $targetElement = $('#' + hash);
+      if ($targetElement.length && $targetElement.closest('.our-service-sec').length) {
+        // Remove classes from all '.our-service' divs in .our-service-sec
+        $('.our-service-sec .our-service').removeClass('active-bg');
+
+        // Add classes to the target element
+        $targetElement.addClass('active-bg');
+
+        // Scroll to target element
+        $('html, body').animate({
+          scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
+        }, 100);
+      }
+    }
+  }
+
+  // Call functions on page load
+  addActiveClassesFromHashServiceSec();
+  addActiveClassesFromHashOurServiceSec();
+
+  // Click event for .fifth-sec .service-sec
+  $(document).on('click', '.icon-box a[href^="#"]', function(event) {
+    event.preventDefault();
+
+    var targetID = $(this).attr('href').substring(1);
+    var $targetElement = $('#' + targetID);
+
+    if ($targetElement.length) {
+      $('.fifth-sec .service-sec .service').removeClass('active-border');
+      $targetElement.addClass('active-border');
+      $('html, body').animate({
+        scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
+      }, 100);
+    }
+  });
+
+  // Click event for .our-service-sec .our-service
+  $(document).on('click', '.fifth-sec .service-sec a[href^="#"]', function(event) {
+    event.preventDefault();
+
+    var targetID = $(this).attr('href').substring(1);
+    var $targetElement = $('#' + targetID);
+
+    if ($targetElement.length) {
+      $('.our-service-sec .our-service').removeClass('active-bg');
+      $targetElement.addClass('active-bg');
+      $('html, body').animate({
+        scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
+      }, 100);
+    }
+  });
+});
