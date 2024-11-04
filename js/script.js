@@ -183,3 +183,27 @@ $(document).on('click', 'a[href^="#"]', function(event) {
     }, 100);
   }
 });
+
+
+
+
+$(document).on('click', 'a[href^="#"]', function(event) {
+  event.preventDefault(); // Prevent default anchor behavior
+
+  // Get the target ID from the href attribute
+  var targetID = $(this).attr('href').substring(1);
+  var $targetElement = $('#' + targetID); // Select the target element by ID
+
+  if ($targetElement.length) {
+    // Remove 'active-border' from all '.servicee' divs
+    $('.our-service-sec .our-service').removeClass('active-bg');
+
+    // Add 'active-border' to the target element
+    $targetElement.addClass('active-bg');
+
+    // Scroll smoothly to the target element
+    $('html, body').animate({
+      scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
+    }, 100);
+  }
+});
