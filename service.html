@@ -528,39 +528,43 @@
     <script src="./js/script.js"></script>
     <script>
        $(document).ready(function() {
-  // Click event to set the URL hash and redirect to the service page
-  $(document).on('click', '.home-page .fifth-sec .service-sec a[href^="#"]', function(event) {
-    event.preventDefault();
-    
-    var targetID = $(this).attr('href'); // Get target ID with '#'
-    window.location.href = 'http://13.53.42.103/indilogic/service.html' + targetID; // Redirect to the service page with hash
-  });
+        // Click event to set the URL hash and redirect to the service page
+        $(document).on('click', '.home-page .fifth-sec .service-sec a[href^="#"]', function(event) {
+            event.preventDefault();
+            
+            var targetID = $(this).attr('href'); // Get target ID with '#'
+            window.location.href = 'http://13.53.42.103/indilogic/service.html' + targetID; // Redirect to service page with hash
+        });
 
-  // On page load, check for a hash and scroll to the target section after page is fully loaded
-  $(window).on('load', function() {
-    if (window.location.hash) {
-      var targetID = window.location.hash.substring(1); // Get the ID without '#'
-      var $targetElement = $('#' + targetID); // Find target element on the service page
-      
-      if ($targetElement.length) {
-        // Remove active class from other '.our-service' elements
-        $('.our-service-sec .our-service').removeClass('active-bg');
-        
-        // Add active class to the target element
-        $targetElement.addClass('active-bg');
-        
-        // Scroll to the target element with delay to ensure layout is fully loaded
-        setTimeout(function() {
-          $('html, body').animate({
-            scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-          }, 300);
-        }, 300); // Adjust delay if necessary
-      } else {
-        console.log("Target element not found on the service page.");
-      }
-    }
-  });
-});
+        // On page load, check if a hash exists and handle scrolling manually
+        $(window).on('load', function() {
+            if (window.location.hash) {
+            // Prevent default hash-based scrolling by storing and clearing the hash
+            var targetID = window.location.hash.substring(1); // Remove '#' from hash
+            history.replaceState(null, null, window.location.pathname); // Clear hash in URL
+
+            var $targetElement = $('#' + targetID); // Find target element
+            
+            if ($targetElement.length) {
+                // Remove active class from other '.our-service' elements
+                $('.our-service-sec .our-service').removeClass('active-bg');
+                
+                // Add active class to the target element
+                $targetElement.addClass('active-bg');
+                
+                // Scroll to the target element with a delay
+                setTimeout(function() {
+                $('html, body').animate({
+                    scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
+                }, 300);
+                }, 300); // Adjust delay if necessary
+            } else {
+                console.log("Target element not found on the service page.");
+            }
+            }
+        });
+    });
+
 
 
     </script>
