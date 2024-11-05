@@ -71,15 +71,6 @@ navLinks.forEach(link => {
 });
 
 
-// document.querySelectorAll('a[href^="service.html/#"]').forEach(anchor => {
-//   anchor.addEventListener('click', function(e) {
-//       e.preventDefault();
-//       const targetId = this.getAttribute('href').split('#')[1];
-//       document.getElementById(targetId).scrollIntoView({
-//           behavior: 'smooth'
-//       });
-//   });
-// });
 
 
 $(window).scroll(function() {
@@ -99,20 +90,7 @@ window.onscroll = function() {
 };
 
 
-// $('a[href^="#"]').on('click', function(e) {
-//   e.preventDefault(); // Prevent default anchor behavior
 
-//   var target = $(this.hash); // Get the target section
-//   if (target.length) { // Ensure target exists
-//     var headerHeight = $('#mainHeader').outerHeight(); // Get current header height
-//     var offset = headerHeight; // Use the full header height for offset
-
-//     // Animate scroll
-//     $('html, body').animate({
-//       scrollTop: target.offset().top - offset // Scroll to section, offset by header height
-//     }, 600); // Animation duration
-//   }
-// });
 
 
 $(window).on('scroll', function() {
@@ -138,30 +116,6 @@ $(window).on('scroll', function() {
 
 
 
-$(document).on('click', 'a[href^="#"]', function(event) {
-  event.preventDefault(); // Prevent default anchor behavior
-
-  // Get the target ID from the href attribute
-  var targetID = $(this).attr('href').substring(1);
-  var $targetElement = $('#' + targetID); // Select the target element by ID
-
-  if ($targetElement.length) {
-    // Remove 'active-border' from all '.servicee' divs
-    $('.fifth-sec .service-sec .service').removeClass('active-border');
-
-    // Add 'active-border' to the target element
-    $targetElement.addClass('active-border');
-
-    // Scroll smoothly to the target element
-    $('html, body').animate({
-      scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-    }, 100);
-  }
-});
-
-
-
-
 $(document).ready(function() {
   // Function to add 'active-border' and 'active-bg' based on URL hash for .service-sec section
   function addActiveClassesFromHashServiceSec() {
@@ -184,43 +138,11 @@ $(document).ready(function() {
     }
   }
 
-  // Function to add 'active-border' and 'active-bg' based on URL hash for .our-service-sec section
-  // function addActiveClassesFromHashOurServiceSec() {
-  //   var hash = window.location.hash.substring(1);
-
-  //   if (hash) {
-  //       var $targetElement = $('#' + hash);
-        
-  //       // Check if the target element exists and is within the '.our-service-sec' section
-  //       if ($targetElement.length && $targetElement.closest('.our-service-sec').length) {
-  //           // Remove 'active-bg' class from all '.our-service' divs in '.our-service-sec'
-  //           $('.our-service-sec .our-service').removeClass('active-bg');
-
-  //           // Add 'active-bg' class to the target element
-  //           $targetElement.addClass('active-bg');
-
-  //           // Log target position for debugging
-  //           console.log("Scrolling to:", $targetElement.offset().top);
-            
-  //           // Scroll to target element, adjusting for header height
-  //           $('html, body').animate({
-  //               scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-  //           }, 300, function() {
-  //               // Optional: log after scrolling to confirm
-  //               console.log("Scrolled to:", $targetElement.offset().top);
-  //           });
-  //       } else {
-  //           console.log("Target element not found or not within '.our-service-sec'.");
-  //       }
-  //   } else {
-  //       console.log("No hash found in the URL.", );
-  //   }
-  // }
-
+  
 
   // Call functions on page load
   addActiveClassesFromHashServiceSec();
-  // addActiveClassesFromHashOurServiceSec(); 
+ 
 
   // Click event for .fifth-sec .service-sec
   $(document).on('click', '.icon-box a[href^="#"]', function(event) {
@@ -239,28 +161,6 @@ $(document).ready(function() {
   });
 
 
-  //Click event for .our-service-sec a[href^="#"]
-  // $(document).on('click', '.home-page .fifth-sec .service-sec a[href^="#"]', function(event) {
-  //   event.preventDefault();
-  
-  //   var targetID = $(this).attr('href').substring(1); // Get the target ID from href
-  //   var $targetElement = $('#' + targetID); // Find the target element
-  
-  //   // Ensure targetID matches with a .our-service element
-  //   if ($targetElement.length && $targetElement.hasClass('our-service')) {
-  //     // Remove active class from all '.our-service' divs
-  //     $('.service-page .our-service-sec .our-service').removeClass('active-bg');
-      
-  //     // Add active class to the target element
-  //     $targetElement.addClass('active-bg');
-      
-  //     // Scroll to target element
-  //     $('html, body').animate({
-  //       scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-  //     }, 100);
-  //   }
-  // });
-  
 });
 
 
