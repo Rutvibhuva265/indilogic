@@ -1,3 +1,7 @@
+.active-bg {
+    background-color: yellow; /* Example style */
+}
+
 .inner-banner-sec{
     padding: 10px 0 0;
     margin-top: 115px;
@@ -469,7 +473,7 @@ section.inner-banner-sec.service::before{
 .our-service-sec .our-service:hover{
     background-color: #DDF1F8;
 }
-.our-service-sec .active-bg .our-service{
+.our-service.active-bg{
     background-color: #DDF1F8;
 }
 .our-service-sec .our-service h4{

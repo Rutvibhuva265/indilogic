@@ -163,17 +163,10 @@
                                     and performance, providing a smooth and stable user experience.</p>
                             
                                 <div class="row gy-4">
-                                    <div class="col-md-6 d-flex">
-                                        <div class="inner-content">
-                                            <h5>Audio and Multimedia Driver Development</h5>
-                                            <p>We specialize in premier audio and multimedia driver development, with a proven track record in creating WDM audio driver and providing robust nterface support. Our expertise extends across advanced Windows sound architecture, delivering exceptional device support for Windows environments. </p>
-                                            <p>Additionally, we excel in developing tailored audio solutions for PCs, embedded platforms, and wearable devices. Embrace innovation and tackle new challenges with our cutting-edge driver solutions.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 d-flex">
+                                    <div class="col-md-12 d-flex">
                                         <div class="inner-content">
                                             <h5>USB Device Driver Development</h5>
-                                            <p>We specialize in advanced USB device driver development for a diverse range of platforms, including Windows XP through 10, Linux, Android, iOS, and macOS. Our expert engineers excel in kernel-mode driver development, leveraging in-depth OS knowledge to create and debug custom driver effectively.</p>
+                                            <p>We specialize in advanced USB device driver development for a diverse range of platforms, including Windows XP through 10, 11, Linux, Android, iOS, and macOS. Our expert engineers excel in kernel-mode driver development, leveraging in-depth OS knowledge to create and debug custom driver effectively.</p>
                                             <p> We adhere to stringent coding standards and quality assurance practices, ensuring optimal performance and eliminating bottlenecks. From development to deployment, we deliver innovative and authentic solutions that drive device functionality and reliability.</p>
                                         </div>
                                     </div>
@@ -192,7 +185,7 @@
                                     </svg>   
                                 </div>
                                 <h4>Cross-Platform Application Development</h4>
-                                <p> We specialize in crafting desktop and Windows applications tailored to your exact needs. Our solutions are secure, scalable, and seamlessly integrate with your existing systems to drive business success. </p>
+                                <p> We provide comprehensive Cross-Platform application development services, creating powerful, user-friendly applications for various operating systems (Windows, MacOS, Linux). Our tailored solutions deliver high functionality, intuitive interfaces, and seamless integration with your existing systems. Users in different platforms are ensured similar experiences offering significant benefits in efficiency and reach. </p>
                         
                             </div>
                         </div>
@@ -209,16 +202,11 @@
                                             <h5>Custom Desktop Application Development</h5>
                                             <p>We specialize in custom desktop application development, precisely crafted to meet your unique needs.</p>
                                             <p>Our experts work closely with you to understand your requirements, delivering bespoke applications designed to enhance efficiency and drive productivity in your business.</p>
+                                            <p>We enhance your software by enabling secure data exchange, seamless third-party integrations, and expanded functionality, ensuring your applications are more powerful and versatile.</p>
+                                            <p>Our experts focus on delivering user-friendly, optimized, and highly responsive applications that provide a seamless experience for your users.</p>
                                         </div>
                                     </div>
                                     <div class="col-md-6 d-flex">
-                                        <div class="inner-content">
-                                            <h5>API Development for Desktop Application</h5>
-                                            <p>Unlock new potential for your desktop applications with custom APIs. </p>
-                                            <p>We enhance your software by enabling secure data exchange, seamless third-party integrations, and expanded functionality, ensuring your applications are more powerful and versatile.</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 d-flex">
                                         <div class="inner-content">
                                             <h5>UWP Application Development</h5>
                                             <p>We create UWP applications that run flawlessly across all Windows devices.</p>
@@ -266,20 +254,13 @@
                                             <p>Our expertise ensures a smooth transition with minimal disruption,enabling your systems to leverage the latest technology while preserving functionality and performance.</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 d-flex">
-                                        <div class="inner-content">
-                                            <h5>Digital Signal Processing (DSP)</h5>
-                                            <p>Our firmware development expertise in Digital Signal Processing (DSP) enables us to deliver cutting-edge solutions for real-time analysis of sensor, audio, and video data. We integrate advanced machine learning algorithms, applied both locally and in the cloud, to enhance functionalities such as object detection in camera feeds, noise reduction in voice recordings, and pattern recognition in equipment monitoring. </p>
-                                            <p>Our bespoke DSP solutions are designed to provide precise, efficient, and adaptable data processing, tailored to meet your unique requirements and optimize performance.</p>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 d-flex" >
                         <div class="our-service" id="service4">
-                            <div class="div"  data-popup="popup-3">
+                            <div class="div"  data-popup="popup-4">
                                 <div class="arrow">
                                     <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M2.30859 0.896954C1.6994 0.896954 1.20555 1.3908 1.20555 2C1.20555 2.6092 1.6994 3.10305 2.30859 3.10305V0.896954ZM2.30859 3.10305H18.5699V0.896954H2.30859V3.10305Z" fill="#1E1E1E"/>
@@ -526,46 +507,75 @@
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/script.js"></script>
-    <script>
-        // Click event on the home page to redirect to the service page with the hash in the URL
-$(document).on('click', '.home-page .fifth-sec .service-sec a[href^="#"]', function(event) {
-    event.preventDefault();
-    
-    var targetID = $(this).attr('href'); // Get the hash with '#'
-    window.location.href = 'http://13.53.42.103/indilogic/service.html' + targetID; // Redirect to service page with hash
-});
+<script>
 
-// On the service page, prevent default hash scroll behavior, and handle it manually
-$(window).on('load', function() {
-    // Temporarily disable default scroll behavior
-    if (window.location.hash) {
-        // Store the hash without the '#' character
-        var targetID = window.location.hash.substring(1); 
-        window.location.hash = ''; // Temporarily remove the hash from the URL to prevent auto-scroll
 
-        // After the page fully loads, scroll to the target section
-        setTimeout(function() {
-            var $targetElement = $('#' + targetID); // Locate the target element
+// $(document).ready(function() {
+//     // Function to scroll to the target section and add the active class
+//     function scrollToTarget(targetID) {
+//         var $targetElement = $('#' + targetID); // Find the target element
+//         if ($targetElement.length) {
+//             // Remove active class from all '.our-service' divs
+//             $('.our-service-sec .our-service').removeClass('active-bg');
+//             // Add active class to the target element
+//             $targetElement.addClass('active-bg');
 
-            if ($targetElement.length) {
-                // Remove active class from other '.our-service' elements
-                $('.our-service-sec .our-service').removeClass('active-bg');
-                
-                // Add active class to the target element
-                $targetElement.addClass('active-bg');
-                
-                // Manually scroll to the target element
-                $('html, body').animate({
-                    scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-                }, 500); // Adjust duration if needed
+//             // Scroll to the target element
+//             $('html, body').animate({
+//                 scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight() // Adjust for header height
+//             }, 500, function() {
+//                 console.log("Scrolled to:", targetID); // Log confirmation
+//             });
+//         } else {
+//             console.log("Target element not found:", targetID); // Log if target is not found
+//         }
+//     }
 
-                // Restore the hash in the URL after scroll
-                window.location.hash = '#' + targetID;
-            }
-        }, 300); // Adjust delay if necessary to ensure everything loads
-    }
-});
+//     // Check for hash in URL when the service page loads
+//     var hash = window.location.hash.substring(1); // Get the hash without the '#'
+//     if (hash) {
+//         scrollToTarget(hash); // Scroll to the target on page load
+//     }
 
-    </script>
+//     // Click event for links on the home page
+//     $(document).on('click', '.home-page a[href^="#service"]', function(event) { // Make sure to adjust the selector
+//         event.preventDefault();
+//         var targetID = $(this).attr('href').substring(1); // Remove the '#' from href
+//         window.location.href = 'http://example.com/service.html#' + targetID; // Replace with your actual URL
+//     });
+
+//     // Click event for links that contain hashes on the service page
+//     $(document).on('click', 'a[href^="#"]', function(event) {
+//         event.preventDefault();
+//         var targetID = $(this).attr('href').substring(1); // Remove the '#' from href
+//         scrollToTarget(targetID); // Scroll to the target when clicked
+//     });
+
+//     // Add scroll event listener to manage the active class
+//     $(window).on('scroll', function() {
+//         var scrollPos = $(document).scrollTop(); // Get current scroll position
+
+//         $('.our-service-sec .our-service').each(function() {
+//             var $this = $(this);
+//             var offsetTop = $this.offset().top; // Get the offset of the element
+//             var offsetHeight = $this.outerHeight(); // Get the height of the element
+
+//             // Check if the current scroll position is within this element's offset
+//             if (scrollPos >= offsetTop - $('#mainHeader').outerHeight() && scrollPos < offsetTop + offsetHeight) {
+//                 $('.our-service-sec .our-service').removeClass('active-bg'); // Remove class from all
+//                 $this.addClass('active-bg'); // Add class to the currently viewed section
+//             }
+//         });
+//     });
+// });
+
+
+
+
+</script>
+
+
+
+        
 </body>
 </html>

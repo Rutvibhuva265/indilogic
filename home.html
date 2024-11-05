@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/inner-page.css">
-   
+    <script>
+        $(document).ready(function() {
+            // Click event for links to service page
+            $(document).on('click', 'a[href^="service.html#"]', function(event) {
+                event.preventDefault(); // Prevent default anchor click behavior
+                var targetID = $(this).attr('href').split('#')[1]; // Extract the target ID
+                window.location.href = 'service.html#' + targetID; // Redirect to service page with hash
+            });
+        });
+    </script>
 </head>
 <body class="home-page">
     <header class="site-header" id="mainHeader">
