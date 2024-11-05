@@ -138,26 +138,26 @@ $(window).on('scroll', function() {
 
 
 
-// $(document).on('click', 'a[href^="#"]', function(event) {
-//   event.preventDefault(); // Prevent default anchor behavior
+$(document).on('click', 'a[href^="#"]', function(event) {
+  event.preventDefault(); // Prevent default anchor behavior
 
-//   // Get the target ID from the href attribute
-//   var targetID = $(this).attr('href').substring(1);
-//   var $targetElement = $('#' + targetID); // Select the target element by ID
+  // Get the target ID from the href attribute
+  var targetID = $(this).attr('href').substring(1);
+  var $targetElement = $('#' + targetID); // Select the target element by ID
 
-//   if ($targetElement.length) {
-//     // Remove 'active-border' from all '.servicee' divs
-//     $('.fifth-sec .service-sec .service').removeClass('active-border');
+  if ($targetElement.length) {
+    // Remove 'active-border' from all '.servicee' divs
+    $('.fifth-sec .service-sec .service').removeClass('active-border');
 
-//     // Add 'active-border' to the target element
-//     $targetElement.addClass('active-border');
+    // Add 'active-border' to the target element
+    $targetElement.addClass('active-border');
 
-//     // Scroll smoothly to the target element
-//     $('html, body').animate({
-//       scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-//     }, 100);
-//   }
-// });
+    // Scroll smoothly to the target element
+    $('html, body').animate({
+      scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
+    }, 100);
+  }
+});
 
 
 
@@ -239,7 +239,7 @@ $(document).ready(function() {
   });
 
 
-  // Click event for .our-service-sec a[href^="#"]
+  //Click event for .our-service-sec a[href^="#"]
   // $(document).on('click', '.home-page .fifth-sec .service-sec a[href^="#"]', function(event) {
   //   event.preventDefault();
   

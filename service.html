@@ -134,7 +134,7 @@
                 </div>
             </div>
         </section>
-        <section class="our-service-sec">
+        <section class="our-service-sec" id="our-service-sec">
             <div class="container">
                 <div class="common-title text-white">
                     <h4>OUR SERVICES</h4>
@@ -142,7 +142,7 @@
                 </div>
                 <div class="row pt-4 gy-4">
                     <div class="col-md-4 d-flex">
-                        <div class="our-service"  id="service1">
+                        <div class="our-service">
                             <div class="div"  data-popup="popup-1">
                                 <div class="arrow" >
                                     <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -175,7 +175,7 @@
                         </div>
                     </div>
                     <div class="col-md-8 d-flex">
-                        <div class="our-service px-md-5"  id="service2">
+                        <div class="our-service px-md-5" >
                             <div class="div"  data-popup="popup-2">
                                 <div class="arrow" >
                                     <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -218,7 +218,7 @@
                         </div>
                     </div>
                     <div class="col-md-8 d-flex" >
-                        <div class="our-service px-md-5" id="service3">
+                        <div class="our-service px-md-5">
                             <div class="div"  data-popup="popup-3">
                                 <div class="arrow" data-popup="popup-3">
                                     <svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -506,76 +506,6 @@
     </footer>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./js/script.js"></script>
-<script>
-
-
-// $(document).ready(function() {
-//     // Function to scroll to the target section and add the active class
-//     function scrollToTarget(targetID) {
-//         var $targetElement = $('#' + targetID); // Find the target element
-//         if ($targetElement.length) {
-//             // Remove active class from all '.our-service' divs
-//             $('.our-service-sec .our-service').removeClass('active-bg');
-//             // Add active class to the target element
-//             $targetElement.addClass('active-bg');
-
-//             // Scroll to the target element
-//             $('html, body').animate({
-//                 scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight() // Adjust for header height
-//             }, 500, function() {
-//                 console.log("Scrolled to:", targetID); // Log confirmation
-//             });
-//         } else {
-//             console.log("Target element not found:", targetID); // Log if target is not found
-//         }
-//     }
-
-//     // Check for hash in URL when the service page loads
-//     var hash = window.location.hash.substring(1); // Get the hash without the '#'
-//     if (hash) {
-//         scrollToTarget(hash); // Scroll to the target on page load
-//     }
-
-//     // Click event for links on the home page
-//     $(document).on('click', '.home-page a[href^="#service"]', function(event) { // Make sure to adjust the selector
-//         event.preventDefault();
-//         var targetID = $(this).attr('href').substring(1); // Remove the '#' from href
-//         window.location.href = 'http://example.com/service.html#' + targetID; // Replace with your actual URL
-//     });
-
-//     // Click event for links that contain hashes on the service page
-//     $(document).on('click', 'a[href^="#"]', function(event) {
-//         event.preventDefault();
-//         var targetID = $(this).attr('href').substring(1); // Remove the '#' from href
-//         scrollToTarget(targetID); // Scroll to the target when clicked
-//     });
-
-//     // Add scroll event listener to manage the active class
-//     $(window).on('scroll', function() {
-//         var scrollPos = $(document).scrollTop(); // Get current scroll position
-
-//         $('.our-service-sec .our-service').each(function() {
-//             var $this = $(this);
-//             var offsetTop = $this.offset().top; // Get the offset of the element
-//             var offsetHeight = $this.outerHeight(); // Get the height of the element
-
-//             // Check if the current scroll position is within this element's offset
-//             if (scrollPos >= offsetTop - $('#mainHeader').outerHeight() && scrollPos < offsetTop + offsetHeight) {
-//                 $('.our-service-sec .our-service').removeClass('active-bg'); // Remove class from all
-//                 $this.addClass('active-bg'); // Add class to the currently viewed section
-//             }
-//         });
-//     });
-// });
-
-
-
-
-</script>
-
-
-
-        
+    <script src="./js/script.js"></script>    
 </body>
 </html>
