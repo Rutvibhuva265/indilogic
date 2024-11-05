@@ -527,7 +527,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/script.js"></script>
     <script>
-// Click event on the home page to redirect to the service page with the hash in the URL
+        // Click event on the home page to redirect to the service page with the hash in the URL
 $(document).on('click', '.home-page .fifth-sec .service-sec a[href^="#"]', function(event) {
     event.preventDefault();
     
@@ -535,33 +535,37 @@ $(document).on('click', '.home-page .fifth-sec .service-sec a[href^="#"]', funct
     window.location.href = 'http://13.53.42.103/indilogic/service.html' + targetID; // Redirect to service page with hash
 });
 
-// Service page logic to handle scrolling on load
+// On the service page, prevent default hash scroll behavior, and handle it manually
 $(window).on('load', function() {
-    var targetID = window.location.hash.substring(1); // Extract the hash without '#'
+    // Temporarily disable default scroll behavior
+    if (window.location.hash) {
+        // Store the hash without the '#' character
+        var targetID = window.location.hash.substring(1); 
+        window.location.hash = ''; // Temporarily remove the hash from the URL to prevent auto-scroll
 
-    // Check if there's a hash and a corresponding target element on the page
-    if (targetID) {
-        var $targetElement = $('#' + targetID); // Locate the target element
+        // After the page fully loads, scroll to the target section
+        setTimeout(function() {
+            var $targetElement = $('#' + targetID); // Locate the target element
 
-        // Verify that the target element exists
-        if ($targetElement.length) {
-            // Remove active class from other '.our-service' elements
-            $('.our-service-sec .our-service').removeClass('active-bg');
-            
-            // Add active class to the target element
-            $targetElement.addClass('active-bg');
-            
-            // Perform the scroll after a short delay to ensure layout is fully rendered
-            setTimeout(function() {
+            if ($targetElement.length) {
+                // Remove active class from other '.our-service' elements
+                $('.our-service-sec .our-service').removeClass('active-bg');
+                
+                // Add active class to the target element
+                $targetElement.addClass('active-bg');
+                
+                // Manually scroll to the target element
                 $('html, body').animate({
                     scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-                }, 500); // 500ms duration for smoother scroll
-            }, 300); // Adjust delay if necessary
-        } else {
-            console.log("Target element not found: #" + targetID);
-        }
+                }, 500); // Adjust duration if needed
+
+                // Restore the hash in the URL after scroll
+                window.location.hash = '#' + targetID;
+            }
+        }, 300); // Adjust delay if necessary to ensure everything loads
     }
 });
+
     </script>
 </body>
 </html>
