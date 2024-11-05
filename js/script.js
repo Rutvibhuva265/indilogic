@@ -263,36 +263,28 @@ $(document).ready(function() {
     }
   });
 
-  $(document).on('click', '.home-page .fifth-sec .service-sec a[href^="#"]', function(event) {
-    event.preventDefault();
-
-    var targetID = $(this).attr('href').substring(1); // Get the target ID from href
-    // Redirect to the service page with the hash
-    window.location.href = 'http://13.53.42.103/indilogic/service.html#' + targetID;
-  });
-
 
   // Click event for .our-service-sec a[href^="#"]
-  $(document).on('click', '.home-page .fifth-sec .service-sec a[href^="#"]', function(event) {
-    event.preventDefault();
+  // $(document).on('click', '.home-page .fifth-sec .service-sec a[href^="#"]', function(event) {
+  //   event.preventDefault();
   
-    var targetID = $(this).attr('href').substring(1); // Get the target ID from href
-    var $targetElement = $('#' + targetID); // Find the target element
+  //   var targetID = $(this).attr('href').substring(1); // Get the target ID from href
+  //   var $targetElement = $('#' + targetID); // Find the target element
   
-    // Ensure targetID matches with a .our-service element
-    if ($targetElement.length && $targetElement.hasClass('our-service')) {
-      // Remove active class from all '.our-service' divs
-      $('.service-page .our-service-sec .our-service').removeClass('active-bg');
+  //   // Ensure targetID matches with a .our-service element
+  //   if ($targetElement.length && $targetElement.hasClass('our-service')) {
+  //     // Remove active class from all '.our-service' divs
+  //     $('.service-page .our-service-sec .our-service').removeClass('active-bg');
       
-      // Add active class to the target element
-      $targetElement.addClass('active-bg');
+  //     // Add active class to the target element
+  //     $targetElement.addClass('active-bg');
       
-      // Scroll to target element
-      $('html, body').animate({
-        scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
-      }, 100);
-    }
-  });
+  //     // Scroll to target element
+  //     $('html, body').animate({
+  //       scrollTop: $targetElement.offset().top - $('#mainHeader').outerHeight()
+  //     }, 100);
+  //   }
+  // });
   
 });
 
