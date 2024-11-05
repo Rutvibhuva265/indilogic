@@ -470,6 +470,9 @@ section.inner-banner-sec.service::before{
     top: 15px;
     right: 20px;
 }
+section.inner-banner-sec.service img {
+    border-radius: 20px;
+}
 .our-service-sec .our-service:hover{
     background-color: #DDF1F8;
 }

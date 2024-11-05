@@ -54,6 +54,48 @@ $(document).ready(function() {
 
 });
 
+
+
+
+// script.js
+
+// Function to get URL query parameters
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
+
+// Function to open a popup by ID
+function openPopup(popupId) {
+  const popup = document.getElementById(popupId);
+  if (popup) {
+      popup.style.display = "flex"; // Show the popup
+  }
+}
+
+// Event listener for closing popups
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("close-popup")) {
+      event.target.closest(".popup").style.display = "none";
+  }
+});
+
+// On page load, check for 'popup' parameter and open relevant popup if it exists
+window.addEventListener("DOMContentLoaded", () => {
+  const popupId = getQueryParam("popup");
+  if (popupId) {
+      openPopup(popupId);
+  }
+});
+
+
+
+
+
+
+
+
+
 // Get the current URL path
 const currentPath = window.location.pathname.split("/").pop();
 
