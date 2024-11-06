@@ -423,7 +423,6 @@ section.inner-banner-sec.service::before{
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     cursor: pointer;
 }
 .service-box h5{
@@ -434,7 +433,7 @@ section.inner-banner-sec.service::before{
     position: absolute;
     background: #2E70A0;
     border-radius: 26px;
-    padding: 35px 25px;
+    padding: 50px 25px;
 }
 .service-box-flip h4{
     font-size: 24px;
